@@ -1,6 +1,6 @@
 /* ============================================
    INVITACIÓN DIGITAL - HERBERTH & ANDREA
-   Estilo elegante con FlipClock y tarjetas con bordes
+   Estilo elegante con diseño moderno y único
    Paleta: Azules y celestes suaves
    Mobile-First Design
 ============================================ */
@@ -14,6 +14,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -21,6 +23,9 @@ body {
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* === LOADER === */
@@ -42,6 +47,7 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -67,6 +73,7 @@ body {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    width: 100%;
 }
 
 [class*="col-"] {
@@ -80,13 +87,16 @@ body {
 .col-xs-10 { width: 83.333333%; }
 .col-md-6 { width: 100%; }
 .col-md-8 { width: 100%; }
+.col-md-10 { width: 100%; }
 .col-md-12 { width: 100%; }
 
 @media (min-width: 992px) {
     .col-md-6 { width: 50%; }
     .col-md-8 { width: 66.666667%; }
+    .col-md-10 { width: 83.333333%; }
     .col-md-12 { width: 100%; }
     .col-md-offset-2 { margin-left: 16.666667%; }
+    .col-md-offset-1 { margin-left: 8.333333%; }
 }
 
 .text-center { text-align: center; }
@@ -127,10 +137,12 @@ body {
     font-size: 16px;
     font-weight: 400;
     transition: all 0.3s;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .menu-1 ul li a:hover {
-    color: #4A90C8;
+    color: #FFD700;
+    transform: translateY(-2px);
 }
 
 .menu-close {
@@ -188,14 +200,28 @@ body {
     }
 }
 
-/* === ENCABEZADO === */
+/* === ENCABEZADO REDISEÑADO - HERMOSO Y ÚNICO === */
 .fh5co-cover {
     position: relative;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+
+/* Patrón decorativo de fondo */
+.fh5co-cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
 }
 
 .fh5co-cover .overlay {
@@ -204,88 +230,102 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .display-t {
     display: table;
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 3;
 }
 
 .display-tc {
     display: table-cell;
     vertical-align: middle;
-    padding-top: 100px;
+    padding: 120px 20px 80px;
 }
 
+/* Nombres de los novios con animación */
 .fh5co-cover h1 {
     font-family: 'Sacramento', cursive;
-    font-size: 72px;
+    font-size: 80px;
     color: white;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    animation: fadeInDown 1.5s ease;
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fecha con estilo elegante */
 .fh5co-cover h2 {
-    font-size: 32px;
+    font-size: 42px;
     color: white;
     font-weight: 300;
-    letter-spacing: 5px;
-    margin: 30px 0;
+    letter-spacing: 12px;
+    margin: 40px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease;
 }
 
-/* === IMAGEN PORTADA - MÁS GRANDE Y SIN BORDE === */
-.img-portada {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-@media (max-width: 768px) {
-    .img-portada {
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .img-portada {
-        max-width: 280px;
-    }
-}
-
-/* === VERSÍCULO === */
+/* === VERSÍCULO REDISEÑADO === */
 .versiculo {
     font-family: 'Sacramento', cursive;
-    font-size: 50px;
+    font-size: 42px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    line-height: 1.6;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    line-height: 1.7;
     font-weight: 300;
-    padding: 0 20px;
-    margin: 30px auto;
+    padding: 0 30px;
+    margin: 40px auto;
     font-style: italic;
     text-align: center;
     max-width: 900px;
+    animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .versiculo-referencia {
     font-family: 'Work Sans', sans-serif;
-    font-size: 32px;
-    margin-top: 15px;
+    font-size: 28px;
+    margin-top: 20px;
     display: block;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 2px;
 }
 
-/* === CONTADOR FLIPCLOCK - MEJORADO Y MÁS GRANDE === */
+/* === CONTADOR FLIPCLOCK === */
 .flipTimebox {
-    margin: 40px auto;
+    margin: 50px auto;
     text-align: center;
     width: 100%;
     overflow: visible;
@@ -305,7 +345,7 @@ body {
     align-items: center !important;
 }
 
-/* Tamaños por defecto (escritorio) - MÁS GRANDES */
+/* Tamaños por defecto (escritorio) */
 .flip-clock-wrapper ul {
     width: 80px !important;
     height: 100px !important;
@@ -336,12 +376,14 @@ body {
     width: 100px !important;
     font-size: 14px !important;
     text-align: center;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .flip-clock-divider .flip-clock-dot {
     width: 8px !important;
     height: 8px !important;
-    background: #fff;
+    background: #FFD700;
     border-radius: 50%;
 }
 
@@ -484,26 +526,36 @@ body {
 /* === BOTÓN === */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    border-radius: 25px;
+    padding: 15px 40px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     transition: all 0.3s;
-    margin: 10px 5px;
+    margin: 20px 5px;
     cursor: pointer;
     border: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 .btn-default {
     background: white;
     color: #2C5F8D;
     border: 2px solid white;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-default:hover {
-    background: transparent;
-    color: white;
+    background: #FFD700;
+    color: #2C5F8D;
+    border-color: #FFD700;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
 }
 
 /* === SECCIONES === */
@@ -511,6 +563,8 @@ body {
     padding: 100px 0;
     position: relative;
     clear: both;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .seccion-gris {
@@ -528,6 +582,7 @@ body {
     font-size: 72px;
     margin-bottom: 60px;
     font-weight: 400;
+    text-align: center;
 }
 
 /* === MENSAJE DE BIENVENIDA === */
@@ -536,11 +591,13 @@ body {
     color: #666;
     line-height: 1.8;
     font-weight: 400;
+    text-align: center;
 }
 
 /* === PADRES Y PADRINOS === */
 .grupo-padres {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .subtitulo-familia {
@@ -569,8 +626,9 @@ body {
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 40px 30px 50px;
-    margin: 20px 10px;
+    margin: 20px auto;
     width: 100%;
+    max-width: 800px;
     overflow: visible;
     min-height: 750px;
     display: flex;
@@ -587,11 +645,13 @@ body {
     letter-spacing: 2px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 
 .info-evento {
     margin: 20px 0;
     font-size: 18px;
+    text-align: center;
 }
 
 .info-evento i {
@@ -612,11 +672,17 @@ body {
 
 .contenido-evento {
     flex: 1;
+    text-align: center;
+}
+
+.contenido-evento p {
+    text-align: center;
 }
 
 .botones-evento {
     margin-top: auto;
     padding-top: 20px;
+    text-align: center;
 }
 
 /* === BOTONES === */
@@ -663,6 +729,8 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .mensaje-transicion i {
@@ -685,7 +753,9 @@ body {
     border-left: 4px solid #FFD700;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
 }
 
 .info-parqueo i {
@@ -801,6 +871,7 @@ body {
     margin: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     min-height: 280px;
+    text-align: center;
 }
 
 .tarjeta-vestimenta h3 {
@@ -845,13 +916,14 @@ body {
     color: white;
 }
 
-/* === MESA DE REGALOS - UNIFICADO === */
+/* === MESA DE REGALOS === */
 .contenedor-regalos {
     background: white;
     border-radius: 15px;
     padding: 40px;
-    margin: 20px 10px;
+    margin: 20px auto;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 900px;
 }
 
 .contenedor-regalos p {
@@ -909,6 +981,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 0;
+    width: 100%;
 }
 
 #fh5co-gallery-list li {
@@ -1152,13 +1225,13 @@ body {
     .tarjeta-evento {
         min-height: auto;
         padding: 30px 20px;
-        margin: 20px 0;
+        margin: 20px 10px;
     }
 
     .tarjeta-vestimenta {
         min-height: auto;
         padding: 30px 20px;
-        margin: 10px 0;
+        margin: 10px;
     }
 
     .versiculo {
@@ -1173,6 +1246,15 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .fh5co-cover h1 {
+        font-size: 64px;
+    }
+
+    .fh5co-cover h2 {
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1186,6 +1268,11 @@ body {
 
     .fh5co-cover h1 {
         font-size: 54px;
+    }
+
+    .fh5co-cover h2 {
+        font-size: 32px;
+        letter-spacing: 6px;
     }
 
     .versiculo {
@@ -1205,7 +1292,7 @@ body {
 
     .tarjeta-evento {
         min-height: auto;
-        margin: 15px 0;
+        margin: 15px 10px;
         padding: 30px 20px;
     }
 
@@ -1259,6 +1346,11 @@ body {
         font-size: 48px;
     }
 
+    .fh5co-cover h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
     .versiculo {
         font-size: 26px;
         padding: 0 10px;
@@ -1274,6 +1366,7 @@ body {
 
     .tarjeta-evento {
         padding: 25px 15px;
+        margin: 15px 5px;
     }
 
     .titulo-evento {
@@ -1342,5 +1435,13 @@ body {
     .boton-reproductor {
         width: 40px;
         height: 40px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 42px;
+    }
+
+    .fh5co-cover h2 {
+        font-size: 24px;
     }
 }
