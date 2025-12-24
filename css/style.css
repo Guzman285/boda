@@ -258,7 +258,7 @@ body {
     }
 }
 
-/* Imagen decorativa entre nombres y fecha - MÁS GRANDE Y MÁS OSCURA */
+/* Imagen decorativa entre nombres y fecha - MÁS GRANDE */
 .imagen-decorativa {
     max-width: 150px;
     height: auto;
@@ -428,46 +428,47 @@ body {
     }
 
     .imagen-decorativa {
-        max-width: 120px;
+        max-width: 130px;
     }
 }
 
-/* Móviles grandes - HEADER AÚN MÁS PEQUEÑO */
+/* Móviles grandes - ULTRA REDUCIDO Y CENTRADO */
 @media (max-width: 768px) {
     .display-tc {
-        padding: 70px 12px 45px;
+        padding: 60px 8px 40px;
     }
 
     .fh5co-cover h1 {
-        font-size: 38px;
-        margin-bottom: 10px;
+        font-size: 34px;
+        margin-bottom: 8px;
     }
 
     .imagen-decorativa {
-        max-width: 80px;
-        margin: 12px auto;
+        max-width: 95px;
+        margin: 10px auto;
     }
 
     .fecha-elegante {
-        font-size: 24px;
-        letter-spacing: 6px;
-        margin: 12px 0;
+        font-size: 22px;
+        letter-spacing: 5px;
+        margin: 10px 0;
     }
 
     .versiculo {
-        font-size: 20px;
-        padding: 0 12px;
-        line-height: 1.4;
-        margin: 15px auto;
+        font-size: 17px;
+        padding: 0 8px;
+        line-height: 1.35;
+        margin: 12px auto;
+        max-width: 100%;
     }
 
     .versiculo-referencia {
-        font-size: 16px;
-        margin-top: 8px;
+        font-size: 15px;
+        margin-top: 6px;
     }
 
     .flipTimebox {
-        margin: 20px auto;
+        margin: 18px auto;
         padding: 0;
     }
 
@@ -501,44 +502,44 @@ body {
     }
 
     .btn {
-        padding: 10px 25px;
+        padding: 10px 24px;
         font-size: 13px;
-        margin: 12px 5px;
+        margin: 10px 5px;
     }
 }
 
-/* Móviles medianos - EXTRA COMPACTO */
+/* Móviles medianos - SUPER COMPACTO */
 @media (max-width: 480px) {
     .display-tc {
-        padding: 60px 10px 35px;
+        padding: 55px 6px 35px;
     }
 
     .fh5co-cover h1 {
-        font-size: 32px;
-        margin-bottom: 8px;
+        font-size: 30px;
+        margin-bottom: 7px;
     }
 
     .imagen-decorativa {
-        max-width: 65px;
-        margin: 10px auto;
+        max-width: 85px;
+        margin: 8px auto;
     }
 
     .fecha-elegante {
-        font-size: 20px;
+        font-size: 19px;
         letter-spacing: 4px;
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .versiculo {
-        font-size: 17px;
-        padding: 0 10px;
+        font-size: 15px;
+        padding: 0 6px;
         line-height: 1.3;
-        margin: 12px auto;
+        margin: 10px auto;
     }
 
     .versiculo-referencia {
-        font-size: 14px;
-        margin-top: 6px;
+        font-size: 13px;
+        margin-top: 5px;
     }
 
     .flipTimebox {
@@ -577,42 +578,42 @@ body {
     .btn {
         padding: 8px 20px;
         font-size: 12px;
-        margin: 10px 5px;
+        margin: 10px 4px;
     }
 }
 
-/* Móviles pequeños - ULTRA COMPACTO */
+/* Móviles pequeños - MÍNIMO ESPACIO */
 @media (max-width: 360px) {
     .display-tc {
-        padding: 55px 8px 30px;
+        padding: 50px 5px 30px;
     }
 
     .fh5co-cover h1 {
-        font-size: 28px;
+        font-size: 26px;
         margin-bottom: 6px;
     }
 
     .imagen-decorativa {
-        max-width: 55px;
-        margin: 8px auto;
+        max-width: 70px;
+        margin: 6px auto;
     }
 
     .fecha-elegante {
-        font-size: 18px;
+        font-size: 17px;
         letter-spacing: 3px;
-        margin: 8px 0;
+        margin: 6px 0;
     }
 
     .versiculo {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 1.25;
-        padding: 0 8px;
-        margin: 10px auto;
+        padding: 0 5px;
+        margin: 8px auto;
     }
 
     .versiculo-referencia {
-        font-size: 13px;
-        margin-top: 5px;
+        font-size: 12px;
+        margin-top: 4px;
     }
 
     .flipTimebox {
