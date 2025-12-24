@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herberth & Andrea - 24 de Enero 2026</title>
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- BOTÓN FLOTANTE DE MÚSICA -->
+    <button id="botonMusica" class="boton-musica" onclick="toggleMusica()" aria-label="Reproducir música">
+        <i class="fas fa-play" id="iconoMusica"></i>
+        <span id="textoMusica">Dale play a nuestra canción</span>
+    </button>
+    
+    <!-- Audio oculto -->
+    <audio id="cancionFondo" loop>
+        <source src="music/que-suerte-tenerte.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- SECCIÓN 1: PORTADA CON FOTO PRINCIPAL -->
+    <section class="portada">
+        <div class="overlay"></div>
+        <div class="contenido-portada">
+            <img src="images/og.jpg" alt="Herberth & Andrea" class="foto-principal">
+            <h1 class="nombres-novios">
+                <span class="nombre-novio">Herberth</span>
+                <span class="ampersand">&</span>
+                <span class="nombre-novia">Andrea</span>
+            </h1>
+            <p class="fecha-principal">24 de Enero, 2026</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 2: VERSÍCULO BÍBLICO -->
+    <section class="versiculo">
+        <div class="contenedor">
+            <i class="fas fa-cross icono-cross"></i>
+            <blockquote class="texto-versiculo">
+                "Ahora, pues, permanecen estas tres virtudes: la fe, la esperanza y el amor. Pero la más excelente de ellas es el amor."
+            </blockquote>
+            <cite class="cita-versiculo">1 Corintios 13:13</cite>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 3: INVITACIÓN + CONTADOR -->
+    <section class="invitacion">
+        <div class="contenedor">
+            <p class="mensaje-invitacion">
+                DESEAMOS DE TODO CORAZÓN PODER CONTAR CON LA PRESENCIA DE CADA UNO DE USTEDES PARA JUNTOS CELEBRAR ESTE DÍA TAN ESPECIAL...
+            </p>
+            
+            <!-- Contador regresivo -->
+            <div class="contador">
+                <div class="contador-item">
+                    <span class="numero" id="dias">00</span>
+                    <span class="etiqueta">Días</span>
+                </div>
+                <div class="contador-item">
+                    <span class="numero" id="horas">00</span>
+                    <span class="etiqueta">Horas</span>
+                </div>
+                <div class="contador-item">
+                    <span class="numero" id="minutos">00</span>
+                    <span class="etiqueta">Minutos</span>
+                </div>
+                <div class="contador-item">
+                    <span class="numero" id="segundos">00</span>
+                    <span class="etiqueta">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 4: BENDICIÓN DE PADRES Y PADRINOS -->
+    <section class="padres">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Con la bendición de Dios y el amor de nuestros padres</h2>
+            
+            <div class="grupo-padres">
+                <h3 class="subtitulo-familia"><i class="fas fa-heart"></i> Padres de la Novia</h3>
+                <p class="nombre-padre">Irlanda Amarilis Mollinedo Román de Masella</p>
+                <p class="nombre-padre">Tulio Humberto Masella Archila</p>
+            </div>
+            
+            <div class="grupo-padres">
+                <h3 class="subtitulo-familia"><i class="fas fa-heart"></i> Padres del Novio</h3>
+                <p class="nombre-padre">Geisy Elizabeth Amézquita Fuentes</p>
+                <p class="nombre-padre">Fredy Antonio Guzmán de León</p>
+            </div>
+            
+            <div class="grupo-padres">
+                <h3 class="subtitulo-familia"><i class="fas fa-crown"></i> Padrinos</h3>
+                <p class="nombre-padre">Olivia Vides de Navas</p>
+                <p class="nombre-padre">Luis Navas</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 5: EVENTOS (CEREMONIA Y RECEPCIÓN) -->
+    <section class="eventos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Ceremonia Religiosa y Recepción</h2>
+            
+            <!-- Ceremonia -->
+            <div class="evento-card">
+                <div class="evento-header">
+                    <i class="fas fa-church icono-evento"></i>
+                    <h3 class="evento-titulo">Ceremonia Religiosa</h3>
+                </div>
+                <p class="evento-hora"><i class="far fa-clock"></i> 16:00 horas</p>
+                <p class="evento-lugar">Basílica de Nuestra Señora del Rosario</p>
+                <p class="evento-direccion">Zona 1, Ciudad Capital</p>
+                
+                <!-- Mapa embebido -->
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.3192148241415!2d-90.50692049999999!3d14.6378125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a214d5418f95%3A0x8753d0dd44557e9b!2sOficina%20Iglesia%20Santo%20Domingo!5e0!3m2!1ses!2sgt!4v1765998176791!5m2!1ses!2sgt" frameborder="0" allowfullscreen loading="lazy" title="Mapa Ceremonia"></iframe>
+                </div>
+                
+                <a href="https://www.google.com/maps/place/Oficina+Iglesia+Santo+Domingo/@14.6378125,-90.5069205,17z" target="_blank" class="boton-mapa">
+                    <i class="fas fa-map-marker-alt"></i> Cómo llegar
+                </a>
+            </div>
+            
+            <!-- Mensaje intermedio -->
+            <div class="mensaje-transicion">
+                <i class="fas fa-glass-cheers"></i>
+                <p>Posteriormente los esperamos en el Museo de la Merced para celebrar con nosotros</p>
+            </div>
+            
+            <!-- Cóctel y Recepción -->
+            <div class="evento-card">
+                <div class="evento-header">
+                    <i class="fas fa-glass-martini-alt icono-evento"></i>
+                    <h3 class="evento-titulo">Cóctel</h3>
+                </div>
+                <p class="evento-hora"><i class="far fa-clock"></i> 17:00 horas</p>
+                <p class="evento-lugar">Museo Convento de la Merced</p>
+                <p class="evento-direccion">Segundo Piso - Zona 1, Ciudad Capital</p>
+            </div>
+            
+            <div class="evento-card">
+                <div class="evento-header">
+                    <i class="fas fa-utensils icono-evento"></i>
+                    <h3 class="evento-titulo">Recepción</h3>
+                </div>
+                <p class="evento-hora"><i class="far fa-clock"></i> 18:00 horas</p>
+                <p class="evento-lugar">Museo Convento de la Merced</p>
+                <p class="evento-direccion">Primer Piso - Zona 1, Ciudad Capital</p>
+                
+                <!-- Mapa embebido -->
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2265040183256!2d-90.5077864!3d14.64308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3aed1a1b287%3A0x2952da1c0e268971!2sMuseo%20de%20La%20Merced!5e0!3m2!1ses!2sgt!4v1765998112226!5m2!1ses!2sgt" frameborder="0" allowfullscreen loading="lazy" title="Mapa Recepción"></iframe>
+                </div>
+                
+                <a href="https://www.google.com/maps/place/Museo+de+La+Merced/@14.64308,-90.5077864,17z" target="_blank" class="boton-mapa">
+                    <i class="fas fa-map-marker-alt"></i> Cómo llegar
+                </a>
+            </div>
+            
+            <!-- Información de parqueo -->
+            <div class="info-parqueo">
+                <i class="fas fa-parking"></i>
+                <p><strong>Parqueo:</strong> Ubicado atrás de las instalaciones de la Policía Nacional Civil.</p>
+                <p class="nota-efectivo"><i class="fas fa-money-bill-wave"></i> Por favor, llevar efectivo para el pago del parqueo.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 6: CÓDIGO DE VESTIMENTA -->
+    <section class="vestimenta">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Código de Vestimenta</h2>
+            <div class="vestimenta-contenido">
+                <i class="fas fa-tshirt icono-vestimenta"></i>
+                <p class="tipo-vestimenta">Formal</p>
+                <p class="mensaje-vestimenta">
+                    Haz que nuestro día sea aún más especial respetando el código de vestimenta
+                </p>
+                <div class="nota-colores">
+                    <p><i class="fas fa-info-circle"></i> Para las damas:</p>
+                    <p class="texto-delicado">
+                        Te agradeceríamos considerar otros tonos que no sean <strong>blanco, rojo o azul marino</strong>, ya que estos colores están reservados para la novia y sus damas de honor. ¡Tu presencia con cualquier otro color será perfecta!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 7: MESA DE REGALOS -->
+    <section class="regalos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Mesa de Regalos</h2>
+            <div class="regalos-contenido">
+                <i class="fas fa-gift icono-regalo"></i>
+                <p class="mensaje-regalos">
+                    El mejor regalo es tu presencia, pero si deseas darnos un detalle puedes hacerlo mediante una <strong>lluvia de sobres</strong> el día del evento o hemos creado una lista de regalos con artículos que nos ayudarán a construir nuestro hogar juntos.
+                </p>
+                
+                <div class="cemaco-container">
+                    <img src="images/cemaco-logo-removebg-preview.png" alt="Cemaco" class="logo-cemaco">
+                    <a href="https://www.cemaco.com/list/BODAGUZMANMASELLA24012026" target="_blank" class="boton-lista">
+                        <i class="fas fa-external-link-alt"></i> Ver Lista de Regalos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 8: CONFIRMAR ASISTENCIA -->
+    <section class="confirmacion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Confirmar Asistencia</h2>
+            <p class="mensaje-confirmacion">
+                Tu confirmación es muy importante para nosotros. Por favor, háznoslo saber.
+            </p>
+            
+            <div class="botones-confirmacion">
+                <button class="boton-confirmar" onclick="abrirModal('ceremonia')">
+                    <i class="fas fa-church"></i> Confirmar Ceremonia
+                </button>
+                <button class="boton-confirmar" onclick="abrirModal('recepcion')">
+                    <i class="fas fa-glass-cheers"></i> Confirmar Recepción
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MODAL DE CONFIRMACIÓN -->
+    <div id="modalAsistencia" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <h3 class="modal-titulo">Confirmar Asistencia</h3>
+            <p class="modal-subtitulo" id="subtituloEvento"></p>
+            <p class="modal-pregunta">¿Eres invitado de?</p>
+            <div class="modal-botones">
+                <button class="boton-modal novio" onclick="confirmarNovio()">
+                    <i class="fas fa-user-tie"></i> Del Novio
+                </button>
+                <button class="boton-modal novia" onclick="confirmarNovia()">
+                    <i class="fas fa-user"></i> De la Novia
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECCIÓN 9: ITINERARIO -->
+    <section class="itinerario">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Itinerario de Actividades</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-hora">4:00 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-church"></i>
+                        <p>Ceremonia Religiosa</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-hora">5:00 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-glass-martini-alt"></i>
+                        <p>Cóctel</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-hora">6:00 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-car"></i>
+                        <p>Llegada de los Novios</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-hora">6:30 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-champagne-glasses"></i>
+                        <p>Brindis</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-hora">7:00 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-music"></i>
+                        <p>Vals</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-hora">8:00 PM</div>
+                    <div class="timeline-contenido">
+                        <i class="fas fa-utensils"></i>
+                        <p>Cena</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 10: GALERÍA -->
+    <section class="galeria">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestro Lugar</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="images/fundicion-1.jpg" alt="La Fundición 1" loading="lazy">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/fundicion-2.jpg" alt="La Fundición 2" loading="lazy">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/fundicion-3.jpg" alt="La Fundición 3" loading="lazy">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/fundicion-4.jpg" alt="La Fundición 4" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 11: DESPEDIDA -->
+    <section class="despedida">
+        <div class="contenedor">
+            <i class="fas fa-heart icono-corazon"></i>
+            <h2 class="mensaje-final">¡Te esperamos con mucho amor!</h2>
+            <p class="firma">Herberth & Andrea</p>
+            <p class="fecha-final">24 • 01 • 2026</p>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Herberth & Andrea. Con amor para nuestros invitados.</p>
+    </footer>
+    
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,994 @@
+/* ============================================
+   INVITACIÓN DIGITAL - HERBERTH & ANDREA
+   Autor: Creado para la boda del 24 de Enero 2026
+   Paleta: Azules, Celestes y Dorados
+   Mobile-First Design
+============================================ */
+
+/* === RESET Y CONFIGURACIÓN BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de colores */
+    --azul-oscuro: #1a4d7a;
+    --azul-medio: #2e6ba8;
+    --celeste: #5ba3d0;
+    --celeste-claro: #a3d5f5;
+    --dorado: #d4af37;
+    --dorado-claro: #f4e5c2;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris-medio: #e0e0e0;
+    --texto-oscuro: #333333;
+    --texto-medio: #666666;
+    
+    /* Fuentes */
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-texto: 'Montserrat', sans-serif;
+    
+    /* Espaciado */
+    --padding-seccion: 60px 20px;
+    --border-radius: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === BOTÓN FLOTANTE DE MÚSICA === */
+.boton-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+    color: var(--blanco);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.boton-musica:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
+}
+
+.boton-musica.playing {
+    animation: none;
+    background: linear-gradient(135deg, var(--azul-medio), var(--celeste));
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+#textoMusica {
+    display: none;
+}
+
+/* En pantallas más grandes, mostrar texto */
+@media (min-width: 768px) {
+    #textoMusica {
+        display: inline;
+    }
+}
+
+/* === CONTENEDOR GENERAL === */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === TÍTULOS DE SECCIÓN === */
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--azul-oscuro);
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--celeste), var(--dorado));
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+/* === SECCIÓN 1: PORTADA === */
+.portada {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+    overflow: hidden;
+}
+
+.portada .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 77, 122, 0.3);
+    z-index: 1;
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--blanco);
+    padding: 20px;
+}
+
+.foto-principal {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--dorado);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    animation: fadeInScale 1.5s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.nombres-novios {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.nombre-novio, .nombre-novia {
+    display: block;
+}
+
+.ampersand {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin: 10px 0;
+}
+
+.fecha-principal {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    color: var(--dorado);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* === SECCIÓN 2: VERSÍCULO === */
+.versiculo {
+    padding: var(--padding-seccion);
+    background: linear-gradient(to bottom, var(--blanco), var(--gris-claro));
+    text-align: center;
+}
+
+.icono-cross {
+    font-size: 3rem;
+    color: var(--dorado);
+    margin-bottom: 20px;
+}
+
+.texto-versiculo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--azul-oscuro);
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.cita-versiculo {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--texto-medio);
+    font-weight: 500;
+}
+
+/* === SECCIÓN 3: INVITACIÓN + CONTADOR === */
+.invitacion {
+    padding: var(--padding-seccion);
+    background: var(--blanco);
+    text-align: center;
+}
+
+.mensaje-invitacion {
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Contador regresivo */
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contador-item {
+    background: linear-gradient(135deg, var(--azul-medio), var(--celeste));
+    color: var(--blanco);
+    padding: 25px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contador-item .numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--fuente-texto);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contador-item .etiqueta {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* === SECCIÓN 4: PADRES Y PADRINOS === */
+.padres {
+    padding: var(--padding-seccion);
+    background: linear-gradient(to bottom, var(--gris-claro), var(--blanco));
+}
+
+.grupo-padres {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.subtitulo-familia {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--azul-medio);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subtitulo-familia i {
+    color: var(--dorado);
+    font-size: 1.5rem;
+}
+
+.nombre-padre {
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* === SECCIÓN 5: EVENTOS === */
+.eventos {
+    padding: var(--padding-seccion);
+    background: var(--blanco);
+}
+
+.evento-card {
+    background: var(--gris-claro);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+}
+
+.evento-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.icono-evento {
+    font-size: 2.5rem;
+    color: var(--dorado);
+}
+
+.evento-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+}
+
+.evento-hora {
+    font-size: 1.2rem;
+    color: var(--azul-medio);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.evento-hora i {
+    margin-right: 8px;
+}
+
+.evento-lugar {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--texto-oscuro);
+    margin-bottom: 5px;
+}
+
+.evento-direccion {
+    font-size: 1rem;
+    color: var(--texto-medio);
+    margin-bottom: 20px;
+}
+
+/* Mapas embebidos */
+.mapa-container {
+    width: 100%;
+    height: 300px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.boton-mapa {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--azul-medio), var(--celeste));
+    color: var(--blanco);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.boton-mapa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.boton-mapa i {
+    margin-right: 8px;
+}
+
+/* Mensaje de transición */
+.mensaje-transicion {
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+    background: linear-gradient(135deg, var(--celeste-claro), var(--dorado-claro));
+    border-radius: var(--border-radius);
+}
+
+.mensaje-transicion i {
+    font-size: 3rem;
+    color: var(--dorado);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.mensaje-transicion p {
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Información de parqueo */
+.info-parqueo {
+    background: var(--dorado-claro);
+    border-left: 4px solid var(--dorado);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+
+.info-parqueo i {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.info-parqueo p {
+    margin: 10px 0;
+    color: var(--texto-oscuro);
+}
+
+.nota-efectivo {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+}
+
+.nota-efectivo i {
+    display: inline;
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+/* === SECCIÓN 6: CÓDIGO DE VESTIMENTA === */
+.vestimenta {
+    padding: var(--padding-seccion);
+    background: linear-gradient(to bottom, var(--gris-claro), var(--blanco));
+}
+
+.vestimenta-contenido {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.icono-vestimenta {
+    font-size: 4rem;
+    color: var(--dorado);
+    margin-bottom: 20px;
+}
+
+.tipo-vestimenta {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+.mensaje-vestimenta {
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.nota-colores {
+    background: var(--celeste-claro);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--celeste);
+}
+
+.nota-colores p {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.nota-colores i {
+    color: var(--azul-medio);
+    margin-right: 5px;
+}
+
+.texto-delicado {
+    font-size: 1rem;
+    color: var(--texto-oscuro);
+}
+
+.texto-delicado strong {
+    color: var(--azul-oscuro);
+}
+
+/* === SECCIÓN 7: MESA DE REGALOS === */
+.regalos {
+    padding: var(--padding-seccion);
+    background: var(--blanco);
+}
+
+.regalos-contenido {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.icono-regalo {
+    font-size: 4rem;
+    color: var(--dorado);
+    margin-bottom: 20px;
+}
+
+.mensaje-regalos {
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.mensaje-regalos strong {
+    color: var(--azul-oscuro);
+    font-weight: 600;
+}
+
+.cemaco-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-cemaco {
+    width: 200px;
+    height: auto;
+}
+
+.boton-lista {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+    color: var(--blanco);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.boton-lista:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.boton-lista i {
+    margin-right: 8px;
+}
+
+/* === SECCIÓN 8: CONFIRMAR ASISTENCIA === */
+.confirmacion {
+    padding: var(--padding-seccion);
+    background: linear-gradient(135deg, var(--azul-medio), var(--celeste));
+    color: var(--blanco);
+    text-align: center;
+}
+
+.confirmacion .titulo-seccion {
+    color: var(--blanco);
+}
+
+.confirmacion .titulo-seccion::after {
+    background: var(--dorado);
+}
+
+.mensaje-confirmacion {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botones-confirmacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.boton-confirmar {
+    background: var(--dorado);
+    color: var(--blanco);
+    border: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.boton-confirmar:hover {
+    background: var(--dorado-claro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.boton-confirmar i {
+    font-size: 1.3rem;
+}
+
+/* Modal de confirmación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-contenido {
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--texto-medio);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cerrar-modal:hover {
+    color: var(--azul-oscuro);
+}
+
+.modal-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-subtitulo {
+    font-size: 1rem;
+    color: var(--texto-medio);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-pregunta {
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boton-modal {
+    background: var(--celeste);
+    color: var(--blanco);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.boton-modal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.boton-modal.novio {
+    background: linear-gradient(135deg, var(--azul-medio), var(--celeste));
+}
+
+.boton-modal.novia {
+    background: linear-gradient(135deg, var(--celeste), var(--celeste-claro));
+}
+
+/* === SECCIÓN 9: ITINERARIO === */
+.itinerario {
+    padding: var(--padding-seccion);
+    background: var(--gris-claro);
+}
+
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--celeste), var(--dorado));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-hora {
+    flex: 0 0 80px;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    font-size: 1rem;
+}
+
+.timeline-contenido {
+    flex: 1;
+    background: var(--blanco);
+    padding: 20px 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.timeline-contenido::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    width: 15px;
+    height: 15px;
+    background: var(--dorado);
+    border-radius: 50%;
+    border: 3px solid var(--blanco);
+    box-shadow: 0 0 0 3px var(--gris-claro);
+}
+
+.timeline-contenido i {
+    font-size: 1.8rem;
+    color: var(--azul-medio);
+}
+
+.timeline-contenido p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+}
+
+/* === SECCIÓN 10: GALERÍA === */
+.galeria {
+    padding: var(--padding-seccion);
+    background: var(--blanco);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* === SECCIÓN 11: DESPEDIDA === */
+.despedida {
+    padding: var(--padding-seccion);
+    background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+    color: var(--blanco);
+    text-align: center;
+}
+
+.icono-corazon {
+    font-size: 4rem;
+    color: var(--dorado);
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+}
+
+.mensaje-final {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.firma {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.fecha-final {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+/* === FOOTER === */
+.footer {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .nombres-novios {
+        font-size: 4rem;
+    }
+    
+    .foto-principal {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .titulo-seccion {
+        font-size: 3rem;
+    }
+    
+    .botones-confirmacion {
+        flex-direction: row;
+        max-width: 600px;
+    }
+    
+    .cemaco-container {
+        flex-direction: row;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+    :root {
+        --padding-seccion: 80px 40px;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
