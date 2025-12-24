@@ -1167,6 +1167,44 @@ body {
     border-radius: 10px;
 }
 
+/* === NOTA SOLO ADULTOS === */
+.tarjeta-adultos-solo {
+    background: white;
+    border-radius: 15px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #2C5F8D;
+}
+
+.tarjeta-adultos-solo i {
+    font-size: 3rem;
+    color: #FF69B4;
+    margin-bottom: 20px;
+}
+
+.tarjeta-adultos-solo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #2C5F8D;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.tarjeta-adultos-solo p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.tarjeta-adultos-solo .nota-final {
+    font-style: italic;
+    color: #888;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
 /* === DESPEDIDA === */
 .icono-corazon {
     font-size: 4rem;
@@ -1444,6 +1482,18 @@ body {
     .boton-reproductor i {
         font-size: 18px !important;
     }
+
+    .tarjeta-adultos-solo {
+        padding: 40px 30px;
+    }
+
+    .tarjeta-adultos-solo h3 {
+        font-size: 24px;
+    }
+
+    .tarjeta-adultos-solo p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1497,6 +1547,18 @@ body {
 
     .boton-reproductor i {
         font-size: 16px !important;
+    }
+
+    .tarjeta-adultos-solo {
+        padding: 30px 20px;
+    }
+
+    .tarjeta-adultos-solo h3 {
+        font-size: 22px;
+    }
+
+    .tarjeta-adultos-solo p {
+        font-size: 15px;
     }
 }
 
