@@ -1153,17 +1153,18 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: nowrap;
-    gap: 0;
+    gap: 15px;
     width: 100%;
 }
 
 #fh5co-gallery-list li {
-    width: 25%;
+    width: calc(25% - 11.25px);
     height: 400px;
     background-size: cover;
     background-position: center;
     position: relative;
     flex-shrink: 0;
+    border-radius: 10px;
 }
 
 /* === DESPEDIDA === */
@@ -1414,10 +1415,11 @@ body {
 
     #fh5co-gallery-list {
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     #fh5co-gallery-list li {
-        width: 50%;
+        width: calc(50% - 5px);
         height: 250px;
     }
 
@@ -1465,6 +1467,10 @@ body {
 
     .mapa-evento iframe {
         height: 180px;
+    }
+
+    #fh5co-gallery-list {
+        gap: 8px;
     }
 
     #fh5co-gallery-list li {
