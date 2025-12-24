@@ -432,112 +432,37 @@ body {
     }
 }
 
-/* Móviles grandes - AJUSTES PRINCIPALES */
+/* Móviles grandes - HEADER AÚN MÁS PEQUEÑO */
 @media (max-width: 768px) {
     .display-tc {
-        padding: 80px 15px 50px;
+        padding: 70px 12px 45px;
     }
 
     .fh5co-cover h1 {
-        font-size: 48px;
-        margin-bottom: 15px;
+        font-size: 38px;
+        margin-bottom: 10px;
     }
 
     .imagen-decorativa {
-        max-width: 70px;
-        margin: 10px auto;
-    }
-
-    .fecha-elegante {
-        font-size: 32px;
-        letter-spacing: 8px;
-        margin: 15px 0;
-    }
-
-    .versiculo {
-        font-size: 26px;
-        padding: 0 15px;
-        line-height: 1.5;
-        margin: 20px auto;
-    }
-
-    .versiculo-referencia {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .flipTimebox {
-        margin: 25px auto;
-        padding: 5px;
-    }
-
-    .flip-clock-wrapper ul {
-        width: 45px !important;
-        height: 60px !important;
-        margin: 0 3px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 60px !important;
-        font-size: 36px !important;
-    }
-
-    .flip-clock-divider {
-        width: 18px !important;
-        margin: 0 3px !important;
-        height: 60px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        top: 70px !important;
-        right: -30px !important;
-        width: 60px !important;
-        font-size: 10px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 5px !important;
-        height: 5px !important;
-    }
-
-    .btn {
-        padding: 12px 30px;
-        font-size: 14px;
-        margin: 15px 5px;
-    }
-}
-
-/* Móviles medianos - MÁS PEQUEÑO */
-@media (max-width: 480px) {
-    .display-tc {
-        padding: 70px 10px 40px;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 40px;
-        margin-bottom: 12px;
-    }
-
-    .imagen-decorativa {
-        max-width: 55px;
+        max-width: 50px;
         margin: 8px auto;
     }
 
     .fecha-elegante {
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: 6px;
         margin: 12px 0;
     }
 
     .versiculo {
-        font-size: 22px;
-        padding: 0 10px;
+        font-size: 20px;
+        padding: 0 12px;
         line-height: 1.4;
         margin: 15px auto;
     }
 
     .versiculo-referencia {
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 8px;
     }
 
@@ -547,26 +472,26 @@ body {
     }
 
     .flip-clock-wrapper ul {
-        width: 38px !important;
-        height: 50px !important;
+        width: 40px !important;
+        height: 52px !important;
         margin: 0 2px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 50px !important;
-        font-size: 30px !important;
+        line-height: 52px !important;
+        font-size: 32px !important;
     }
 
     .flip-clock-divider {
-        width: 15px !important;
+        width: 16px !important;
         margin: 0 2px !important;
-        height: 50px !important;
+        height: 52px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 60px !important;
-        right: -25px !important;
-        width: 50px !important;
+        top: 62px !important;
+        right: -28px !important;
+        width: 55px !important;
         font-size: 9px !important;
     }
 
@@ -582,37 +507,37 @@ body {
     }
 }
 
-/* Móviles pequeños - AÚN MÁS COMPACTO */
-@media (max-width: 360px) {
+/* Móviles medianos - EXTRA COMPACTO */
+@media (max-width: 480px) {
     .display-tc {
-        padding: 60px 8px 35px;
+        padding: 60px 10px 35px;
     }
 
     .fh5co-cover h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
+        font-size: 32px;
+        margin-bottom: 8px;
     }
 
     .imagen-decorativa {
-        max-width: 45px;
+        max-width: 40px;
         margin: 6px auto;
     }
 
     .fecha-elegante {
-        font-size: 24px;
+        font-size: 20px;
         letter-spacing: 4px;
         margin: 10px 0;
     }
 
     .versiculo {
-        font-size: 19px;
+        font-size: 17px;
+        padding: 0 10px;
         line-height: 1.3;
-        padding: 0 8px;
         margin: 12px auto;
     }
 
     .versiculo-referencia {
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 6px;
     }
 
@@ -621,27 +546,101 @@ body {
     }
 
     .flip-clock-wrapper ul {
-        width: 32px !important;
-        height: 42px !important;
+        width: 34px !important;
+        height: 44px !important;
         margin: 0 1.5px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 42px !important;
-        font-size: 25px !important;
+        line-height: 44px !important;
+        font-size: 27px !important;
     }
 
     .flip-clock-divider {
-        width: 12px !important;
+        width: 13px !important;
         margin: 0 1.5px !important;
-        height: 42px !important;
+        height: 44px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 50px !important;
-        right: -20px !important;
-        width: 40px !important;
+        top: 52px !important;
+        right: -23px !important;
+        width: 45px !important;
         font-size: 8px !important;
+    }
+
+    .flip-clock-divider .flip-clock-dot {
+        width: 3.5px !important;
+        height: 3.5px !important;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        margin: 10px 5px;
+    }
+}
+
+/* Móviles pequeños - ULTRA COMPACTO */
+@media (max-width: 360px) {
+    .display-tc {
+        padding: 55px 8px 30px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 28px;
+        margin-bottom: 6px;
+    }
+
+    .imagen-decorativa {
+        max-width: 35px;
+        margin: 5px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 18px;
+        letter-spacing: 3px;
+        margin: 8px 0;
+    }
+
+    .versiculo {
+        font-size: 15px;
+        line-height: 1.25;
+        padding: 0 8px;
+        margin: 10px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .flipTimebox {
+        margin: 12px auto;
+    }
+
+    .flip-clock-wrapper ul {
+        width: 30px !important;
+        height: 38px !important;
+        margin: 0 1px !important;
+    }
+
+    .flip-clock-wrapper ul li {
+        line-height: 38px !important;
+        font-size: 23px !important;
+    }
+
+    .flip-clock-divider {
+        width: 11px !important;
+        margin: 0 1px !important;
+        height: 38px !important;
+    }
+
+    .flip-clock-divider .flip-clock-label {
+        top: 45px !important;
+        right: -18px !important;
+        width: 38px !important;
+        font-size: 7px !important;
     }
 
     .flip-clock-divider .flip-clock-dot {
@@ -650,9 +649,9 @@ body {
     }
 
     .btn {
-        padding: 8px 20px;
-        font-size: 12px;
-        margin: 10px 5px;
+        padding: 7px 18px;
+        font-size: 11px;
+        margin: 8px 4px;
     }
 }
 
