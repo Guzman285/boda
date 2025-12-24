@@ -37,23 +37,6 @@ $(document).ready(function() {
         });
     }, 100);
 
-    // Botón ir arriba
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 200) {
-            $('.gototop').addClass('active');
-        } else {
-            $('.gototop').removeClass('active');
-        }
-    });
-
-    $('.js-gotop').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 700);
-        return false;
-    });
-
     // Smooth scroll para enlaces internos
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -81,7 +64,7 @@ $(document).ready(function() {
     }
 
     console.log('✅ Invitación digital cargada correctamente');
-    console.log('💕 Herberth & Andrea - 24 de Enero 2026');
+    console.log('💕 Guzmán & Masella - 24 de Enero 2026');
     console.log('⏰ Contador regresivo funcionando correctamente');
 });
 

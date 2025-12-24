@@ -225,7 +225,7 @@ body {
 .display-t {
     display: table;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 3;
 }
@@ -233,7 +233,7 @@ body {
 .display-tc {
     display: table-cell;
     vertical-align: middle;
-    padding: 120px 20px 80px;
+    padding: 100px 20px 60px;
 }
 
 /* Nombres de los novios - GUZMÁN Y MASELLA */
@@ -242,7 +242,7 @@ body {
     font-size: 80px;
     color: white;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     animation: fadeInDown 1.5s ease;
 }
@@ -258,14 +258,14 @@ body {
     }
 }
 
-/* Imagen decorativa entre nombres y fecha */
+/* Imagen decorativa entre nombres y fecha - MÁS OSCURA */
 .imagen-decorativa {
     max-width: 120px;
     height: auto;
-    margin: 30px auto;
+    margin: 15px auto;
     display: block;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    filter: brightness(0) invert(0.7);
+    opacity: 0.85;
 }
 
 /* Fecha con estilo ELEGANTE */
@@ -275,7 +275,7 @@ body {
     color: white;
     font-weight: 300;
     letter-spacing: 15px;
-    margin: 30px 0;
+    margin: 20px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     animation: fadeIn 2s ease;
     font-style: italic;
@@ -295,7 +295,7 @@ body {
     line-height: 1.7;
     font-weight: 300;
     padding: 0 30px;
-    margin: 40px auto;
+    margin: 30px auto;
     font-style: italic;
     text-align: center;
     max-width: 900px;
@@ -316,7 +316,7 @@ body {
 .versiculo-referencia {
     font-family: 'Work Sans', sans-serif;
     font-size: 28px;
-    margin-top: 20px;
+    margin-top: 15px;
     display: block;
     font-weight: 400;
     font-style: normal;
@@ -325,7 +325,7 @@ body {
 
 /* === CONTADOR FLIPCLOCK === */
 .flipTimebox {
-    margin: 50px auto;
+    margin: 40px auto;
     text-align: center;
     width: 100%;
     overflow: visible;
@@ -417,16 +417,58 @@ body {
         width: 6px !important;
         height: 6px !important;
     }
+
+    .fh5co-cover h1 {
+        font-size: 64px;
+    }
+
+    .fecha-elegante {
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+
+    .imagen-decorativa {
+        max-width: 90px;
+    }
 }
 
-/* Móviles grandes */
+/* Móviles grandes - AJUSTES PRINCIPALES */
 @media (max-width: 768px) {
+    .display-tc {
+        padding: 80px 15px 50px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    .imagen-decorativa {
+        max-width: 70px;
+        margin: 10px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 32px;
+        letter-spacing: 8px;
+        margin: 15px 0;
+    }
+
+    .versiculo {
+        font-size: 26px;
+        padding: 0 15px;
+        line-height: 1.5;
+        margin: 20px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
     .flipTimebox {
-        overflow-x: visible;
-        overflow-y: hidden;
-        max-width: 100%;
-        padding: 10px;
-        margin: 30px auto;
+        margin: 25px auto;
+        padding: 5px;
     }
 
     .flip-clock-wrapper ul {
@@ -458,13 +500,52 @@ body {
         height: 5px !important;
     }
 
-    .imagen-decorativa {
-        max-width: 80px;
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+        margin: 15px 5px;
     }
 }
 
-/* Móviles medianos */
+/* Móviles medianos - MÁS PEQUEÑO */
 @media (max-width: 480px) {
+    .display-tc {
+        padding: 70px 10px 40px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .imagen-decorativa {
+        max-width: 55px;
+        margin: 8px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 28px;
+        letter-spacing: 6px;
+        margin: 12px 0;
+    }
+
+    .versiculo {
+        font-size: 22px;
+        padding: 0 10px;
+        line-height: 1.4;
+        margin: 15px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    .flipTimebox {
+        margin: 20px auto;
+        padding: 0;
+    }
+
     .flip-clock-wrapper ul {
         width: 38px !important;
         height: 50px !important;
@@ -494,13 +575,51 @@ body {
         height: 4px !important;
     }
 
-    .imagen-decorativa {
-        max-width: 60px;
+    .btn {
+        padding: 10px 25px;
+        font-size: 13px;
+        margin: 12px 5px;
     }
 }
 
-/* Móviles pequeños */
+/* Móviles pequeños - AÚN MÁS COMPACTO */
 @media (max-width: 360px) {
+    .display-tc {
+        padding: 60px 8px 35px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .imagen-decorativa {
+        max-width: 45px;
+        margin: 6px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin: 10px 0;
+    }
+
+    .versiculo {
+        font-size: 19px;
+        line-height: 1.3;
+        padding: 0 8px;
+        margin: 12px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+
+    .flipTimebox {
+        margin: 15px auto;
+    }
+
     .flip-clock-wrapper ul {
         width: 32px !important;
         height: 42px !important;
@@ -528,6 +647,12 @@ body {
     .flip-clock-divider .flip-clock-dot {
         width: 3px !important;
         height: 3px !important;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        margin: 10px 5px;
     }
 }
 
@@ -928,7 +1053,7 @@ body {
     color: white;
 }
 
-/* === MESA DE REGALOS - CORREGIDO === */
+/* === MESA DE REGALOS === */
 .contenedor-regalos {
     background: white;
     border-radius: 15px;
@@ -1188,7 +1313,7 @@ body {
     margin-right: 8px;
 }
 
-/* === RESPONSIVE === */
+/* === RESPONSIVE SECCIONES === */
 
 @media (max-width: 992px) {
     .seccion {
@@ -1211,26 +1336,9 @@ body {
         margin: 10px;
     }
 
-    .versiculo {
-        font-size: 36px;
-    }
-
-    .versiculo-referencia {
-        font-size: 26px;
-    }
-
     .opciones-regalo {
         flex-direction: column;
         align-items: center;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 64px;
-    }
-
-    .fecha-elegante {
-        font-size: 40px;
-        letter-spacing: 10px;
     }
 }
 
@@ -1241,25 +1349,6 @@ body {
 
     .seccion {
         padding: 50px 0;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 54px;
-    }
-
-    .fecha-elegante {
-        font-size: 36px;
-        letter-spacing: 8px;
-    }
-
-    .versiculo {
-        font-size: 32px;
-        padding: 0 15px;
-        line-height: 1.5;
-    }
-
-    .versiculo-referencia {
-        font-size: 22px;
     }
 
     .titulo-seccion {
@@ -1319,24 +1408,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .fh5co-cover h1 {
-        font-size: 48px;
-    }
-
-    .fecha-elegante {
-        font-size: 32px;
-        letter-spacing: 6px;
-    }
-
-    .versiculo {
-        font-size: 26px;
-        padding: 0 10px;
-    }
-
-    .versiculo-referencia {
-        font-size: 20px;
-    }
-
     .titulo-seccion {
         font-size: 48px;
     }
@@ -1387,15 +1458,6 @@ body {
 }
 
 @media (max-width: 360px) {
-    .versiculo {
-        font-size: 22px;
-        line-height: 1.4;
-    }
-
-    .versiculo-referencia {
-        font-size: 18px;
-    }
-
     .titulo-seccion {
         font-size: 42px;
     }
@@ -1412,14 +1474,5 @@ body {
     .boton-reproductor {
         width: 40px;
         height: 40px;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 42px;
-    }
-
-    .fecha-elegante {
-        font-size: 28px;
-        letter-spacing: 4px;
     }
 }
