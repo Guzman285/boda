@@ -286,7 +286,7 @@ body {
     to { opacity: 1; }
 }
 
-/* === VERSÍCULO - TAMAÑO GRANDE PARA LECTURA FÁCIL === */
+/* === VERSÍCULO - SOLO ESTE MÁS GRANDE === */
 .versiculo {
     font-family: 'Sacramento', cursive;
     font-size: 42px;
@@ -432,7 +432,7 @@ body {
     }
 }
 
-/* Móviles grandes - TODO MÁS GRANDE */
+/* Móviles grandes - SOLO VERSÍCULO MÁS GRANDE */
 @media (max-width: 768px) {
     .display-tc {
         padding: 60px 0 40px;
@@ -456,37 +456,37 @@ body {
         padding-right: 10px;
     }
 
-    /* NOMBRES MÁS GRANDES */
+    /* Nombres IGUAL que antes */
     .fh5co-cover h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
+        font-size: 32px;
+        margin-bottom: 8px;
         width: 100%;
         padding: 0 10px;
         box-sizing: border-box;
     }
 
-    /* IMAGEN CORAZÓN MÁS GRANDE */
+    /* Imagen IGUAL que antes */
     .imagen-decorativa {
-        max-width: 110px;
-        margin: 12px auto;
+        max-width: 90px;
+        margin: 10px auto;
     }
 
-    /* FECHA MÁS GRANDE */
+    /* Fecha IGUAL que antes */
     .fecha-elegante {
-        font-size: 26px;
-        letter-spacing: 5px;
-        margin: 12px 0;
+        font-size: 21px;
+        letter-spacing: 4px;
+        margin: 10px 0;
         width: 100%;
         padding: 0 10px;
         box-sizing: border-box;
     }
 
-    /* VERSÍCULO MÁS GRANDE */
+    /* SOLO EL VERSÍCULO MÁS GRANDE */
     .versiculo {
         font-size: 24px;
         padding: 0 15px;
         line-height: 1.5;
-        margin: 18px auto;
+        margin: 15px auto;
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
@@ -494,7 +494,6 @@ body {
         overflow-wrap: break-word;
     }
 
-    /* REFERENCIA MÁS GRANDE */
     .versiculo-referencia {
         font-size: 20px;
         margin-top: 10px;
@@ -502,39 +501,39 @@ body {
     }
 
     .flipTimebox {
-        margin: 20px auto;
+        margin: 18px auto;
         padding: 0;
         width: 100%;
     }
 
-    /* CONTADOR MÁS GRANDE */
+    /* CONTADOR IGUAL que antes - NO MÁS GRANDE */
     .flip-clock-wrapper ul {
-        width: 50px !important;
-        height: 65px !important;
-        margin: 0 3px !important;
+        width: 42px !important;
+        height: 55px !important;
+        margin: 0 2px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 65px !important;
-        font-size: 36px !important;
+        line-height: 55px !important;
+        font-size: 30px !important;
     }
 
     .flip-clock-divider {
-        width: 18px !important;
-        margin: 0 3px !important;
-        height: 65px !important;
+        width: 16px !important;
+        margin: 0 2px !important;
+        height: 55px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 72px !important;
-        right: -32px !important;
-        width: 65px !important;
-        font-size: 11px !important;
+        top: 62px !important;
+        right: -28px !important;
+        width: 55px !important;
+        font-size: 9px !important;
     }
 
     .flip-clock-divider .flip-clock-dot {
-        width: 5px !important;
-        height: 5px !important;
+        width: 4px !important;
+        height: 4px !important;
     }
 
     .btn {
@@ -551,65 +550,65 @@ body {
     }
 
     .fh5co-cover h1 {
-        font-size: 36px;
-        margin-bottom: 9px;
+        font-size: 28px;
+        margin-bottom: 7px;
     }
 
     .imagen-decorativa {
-        max-width: 95px;
-        margin: 10px auto;
+        max-width: 80px;
+        margin: 8px auto;
     }
 
     .fecha-elegante {
-        font-size: 23px;
-        letter-spacing: 4px;
-        margin: 10px 0;
+        font-size: 18px;
+        letter-spacing: 3px;
+        margin: 8px 0;
     }
 
-    /* VERSÍCULO BIEN LEGIBLE */
+    /* VERSÍCULO MÁS GRANDE */
     .versiculo {
         font-size: 21px;
         padding: 0 12px;
         line-height: 1.45;
-        margin: 15px auto;
+        margin: 12px auto;
     }
 
     .versiculo-referencia {
         font-size: 18px;
-        margin-top: 9px;
+        margin-top: 8px;
     }
 
     .flipTimebox {
-        margin: 18px auto;
+        margin: 15px auto;
     }
 
     .flip-clock-wrapper ul {
-        width: 44px !important;
-        height: 57px !important;
-        margin: 0 2.5px !important;
+        width: 36px !important;
+        height: 47px !important;
+        margin: 0 1.5px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 57px !important;
-        font-size: 32px !important;
+        line-height: 47px !important;
+        font-size: 26px !important;
     }
 
     .flip-clock-divider {
-        width: 16px !important;
-        margin: 0 2.5px !important;
-        height: 57px !important;
+        width: 13px !important;
+        margin: 0 1.5px !important;
+        height: 47px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 64px !important;
-        right: -28px !important;
-        width: 57px !important;
-        font-size: 10px !important;
+        top: 52px !important;
+        right: -23px !important;
+        width: 45px !important;
+        font-size: 8px !important;
     }
 
     .flip-clock-divider .flip-clock-dot {
-        width: 4.5px !important;
-        height: 4.5px !important;
+        width: 3.5px !important;
+        height: 3.5px !important;
     }
 
     .btn {
@@ -626,65 +625,65 @@ body {
     }
 
     .fh5co-cover h1 {
-        font-size: 32px;
-        margin-bottom: 8px;
+        font-size: 24px;
+        margin-bottom: 6px;
     }
 
     .imagen-decorativa {
-        max-width: 85px;
-        margin: 9px auto;
+        max-width: 65px;
+        margin: 6px auto;
     }
 
     .fecha-elegante {
-        font-size: 20px;
-        letter-spacing: 3px;
-        margin: 9px 0;
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin: 6px 0;
     }
 
-    /* VERSÍCULO LEGIBLE INCLUSO EN PANTALLAS PEQUEÑAS */
+    /* VERSÍCULO MÁS GRANDE */
     .versiculo {
         font-size: 19px;
         line-height: 1.4;
         padding: 0 10px;
-        margin: 12px auto;
+        margin: 10px auto;
     }
 
     .versiculo-referencia {
         font-size: 16px;
-        margin-top: 8px;
+        margin-top: 7px;
     }
 
     .flipTimebox {
-        margin: 15px auto;
+        margin: 12px auto;
     }
 
     .flip-clock-wrapper ul {
-        width: 38px !important;
-        height: 50px !important;
-        margin: 0 2px !important;
+        width: 32px !important;
+        height: 42px !important;
+        margin: 0 1px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 50px !important;
-        font-size: 28px !important;
+        line-height: 42px !important;
+        font-size: 23px !important;
     }
 
     .flip-clock-divider {
-        width: 14px !important;
-        margin: 0 2px !important;
-        height: 50px !important;
+        width: 11px !important;
+        margin: 0 1px !important;
+        height: 42px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 56px !important;
-        right: -24px !important;
-        width: 50px !important;
-        font-size: 9px !important;
+        top: 47px !important;
+        right: -18px !important;
+        width: 38px !important;
+        font-size: 7px !important;
     }
 
     .flip-clock-divider .flip-clock-dot {
-        width: 4px !important;
-        height: 4px !important;
+        width: 3px !important;
+        height: 3px !important;
     }
 
     .btn {
