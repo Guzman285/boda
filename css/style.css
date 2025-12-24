@@ -236,14 +236,27 @@ body {
     margin: 30px 0;
 }
 
+/* === IMAGEN PORTADA - MÁS GRANDE Y SIN BORDE === */
 .img-portada {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
-    border: 8px solid white;
+    margin: 20px auto;
+    display: block;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .img-portada {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-portada {
+        max-width: 280px;
+    }
 }
 
 /* === VERSÍCULO === */
@@ -270,16 +283,16 @@ body {
     font-style: normal;
 }
 
-/* === CONTADOR FLIPCLOCK === */
+/* === CONTADOR FLIPCLOCK - MEJORADO Y MÁS GRANDE === */
 .flipTimebox {
-    margin: 30px auto;
+    margin: 40px auto;
     text-align: center;
     width: 100%;
     overflow: visible;
 }
 
 .flipTimebox .clock {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
 }
 
@@ -289,128 +302,182 @@ body {
     width: auto !important;
     white-space: nowrap !important;
     justify-content: center !important;
+    align-items: center !important;
 }
 
+/* Tamaños por defecto (escritorio) - MÁS GRANDES */
 .flip-clock-wrapper ul {
-    width: 60px !important;
-    height: 90px !important;
+    width: 80px !important;
+    height: 100px !important;
     float: none !important;
-    margin: 0 3px !important;
+    margin: 0 5px !important;
     display: inline-block !important;
     flex-shrink: 0 !important;
 }
 
 .flip-clock-wrapper ul li {
-    line-height: 87px !important;
+    line-height: 100px !important;
+    font-size: 60px !important;
 }
 
 .flip-clock-divider {
     float: none !important;
-    width: 20px !important;
-    margin: 0 3px !important;
+    width: 30px !important;
+    margin: 0 5px !important;
     display: inline-block !important;
     flex-shrink: 0 !important;
+    height: 100px !important;
 }
 
-/* Responsive para contador */
+.flip-clock-divider .flip-clock-label {
+    position: absolute;
+    top: 110px !important;
+    right: -50px !important;
+    width: 100px !important;
+    font-size: 14px !important;
+    text-align: center;
+}
+
+.flip-clock-divider .flip-clock-dot {
+    width: 8px !important;
+    height: 8px !important;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .flip-clock-wrapper ul {
+        width: 60px !important;
+        height: 80px !important;
+        margin: 0 4px !important;
+    }
+
+    .flip-clock-wrapper ul li {
+        line-height: 80px !important;
+        font-size: 48px !important;
+    }
+
+    .flip-clock-divider {
+        width: 24px !important;
+        margin: 0 4px !important;
+        height: 80px !important;
+    }
+
+    .flip-clock-divider .flip-clock-label {
+        top: 90px !important;
+        right: -40px !important;
+        width: 80px !important;
+        font-size: 12px !important;
+    }
+
+    .flip-clock-divider .flip-clock-dot {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* Móviles grandes */
 @media (max-width: 768px) {
     .flipTimebox {
         overflow-x: visible;
         overflow-y: hidden;
         max-width: 100%;
-        padding: 5px;
-        margin: 12px auto;
+        padding: 10px;
+        margin: 30px auto;
     }
 
     .flip-clock-wrapper ul {
-        width: 20px !important;
-        height: 32px !important;
-        margin: 0 0.7px !important;
+        width: 45px !important;
+        height: 60px !important;
+        margin: 0 3px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 32px !important;
-        font-size: 10px !important;
+        line-height: 60px !important;
+        font-size: 36px !important;
     }
 
     .flip-clock-divider {
-        width: 7px !important;
-        margin: 0 0.7px !important;
+        width: 18px !important;
+        margin: 0 3px !important;
+        height: 60px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        right: -24px !important;
+        top: 70px !important;
+        right: -30px !important;
+        width: 60px !important;
+        font-size: 10px !important;
+    }
+
+    .flip-clock-divider .flip-clock-dot {
+        width: 5px !important;
+        height: 5px !important;
+    }
+}
+
+/* Móviles medianos */
+@media (max-width: 480px) {
+    .flip-clock-wrapper ul {
+        width: 38px !important;
+        height: 50px !important;
+        margin: 0 2px !important;
+    }
+
+    .flip-clock-wrapper ul li {
+        line-height: 50px !important;
+        font-size: 30px !important;
+    }
+
+    .flip-clock-divider {
+        width: 15px !important;
+        margin: 0 2px !important;
+        height: 50px !important;
+    }
+
+    .flip-clock-divider .flip-clock-label {
+        top: 60px !important;
+        right: -25px !important;
+        width: 50px !important;
+        font-size: 9px !important;
+    }
+
+    .flip-clock-divider .flip-clock-dot {
+        width: 4px !important;
+        height: 4px !important;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+    .flip-clock-wrapper ul {
+        width: 32px !important;
+        height: 42px !important;
+        margin: 0 1.5px !important;
+    }
+
+    .flip-clock-wrapper ul li {
+        line-height: 42px !important;
+        font-size: 25px !important;
+    }
+
+    .flip-clock-divider {
+        width: 12px !important;
+        margin: 0 1.5px !important;
+        height: 42px !important;
+    }
+
+    .flip-clock-divider .flip-clock-label {
+        top: 50px !important;
+        right: -20px !important;
+        width: 40px !important;
+        font-size: 8px !important;
     }
 
     .flip-clock-divider .flip-clock-dot {
         width: 3px !important;
         height: 3px !important;
-    }
-
-    .flip-clock-label {
-        font-size: 5px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .flip-clock-wrapper ul {
-        width: 18px !important;
-        height: 28px !important;
-        margin: 0 0.6px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 28px !important;
-        font-size: 9px !important;
-    }
-
-    .flip-clock-divider {
-        width: 6px !important;
-        margin: 0 0.6px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        right: -20px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 2.5px !important;
-        height: 2.5px !important;
-    }
-
-    .flip-clock-label {
-        font-size: 4.5px !important;
-    }
-}
-
-@media (max-width: 360px) {
-    .flip-clock-wrapper ul {
-        width: 16px !important;
-        height: 26px !important;
-        margin: 0 0.5px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 26px !important;
-        font-size: 8px !important;
-    }
-
-    .flip-clock-divider {
-        width: 5px !important;
-        margin: 0 0.5px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        right: -18px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 2px !important;
-        height: 2px !important;
-    }
-
-    .flip-clock-label {
-        font-size: 4px !important;
     }
 }
 
@@ -618,6 +685,7 @@ body {
     border-left: 4px solid #FFD700;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 30px;
 }
 
 .info-parqueo i {
@@ -777,39 +845,59 @@ body {
     color: white;
 }
 
-/* === MESA DE REGALOS === */
-.tarjeta-regalo {
+/* === MESA DE REGALOS - UNIFICADO === */
+.contenedor-regalos {
     background: white;
     border-radius: 15px;
     padding: 40px;
-    margin: 10px;
+    margin: 20px 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.tarjeta-regalo h3 {
-    color: #2C5F8D;
-    font-size: 22px;
-    margin: 10px 0 20px;
-}
-
-.tarjeta-regalo p {
-    font-size: 16px;
+.contenedor-regalos p {
+    font-size: 18px;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.opciones-regalo {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.opcion-regalo-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    text-align: center;
 }
 
 .logo-regalo {
     height: 120px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .icono-regalo {
     font-size: 60px;
     color: #2C5F8D;
+    margin-bottom: 20px;
+}
+
+.opcion-regalo-item h3 {
+    color: #2C5F8D;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.opcion-regalo-item p {
+    font-size: 16px;
+    color: #666;
     margin-bottom: 20px;
 }
 
@@ -1067,8 +1155,7 @@ body {
         margin: 20px 0;
     }
 
-    .tarjeta-vestimenta,
-    .tarjeta-regalo {
+    .tarjeta-vestimenta {
         min-height: auto;
         padding: 30px 20px;
         margin: 10px 0;
@@ -1080,6 +1167,11 @@ body {
 
     .versiculo-referencia {
         font-size: 26px;
+    }
+
+    .opciones-regalo {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1094,11 +1186,6 @@ body {
 
     .fh5co-cover h1 {
         font-size: 54px;
-    }
-
-    .img-portada {
-        width: 220px;
-        height: 220px;
     }
 
     .versiculo {
@@ -1170,11 +1257,6 @@ body {
 @media (max-width: 480px) {
     .fh5co-cover h1 {
         font-size: 48px;
-    }
-
-    .img-portada {
-        width: 180px;
-        height: 180px;
     }
 
     .versiculo {

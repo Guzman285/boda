@@ -9,13 +9,21 @@ let eventoSeleccionado = '';
 
 // === INICIALIZACIÓN AL CARGAR LA PÁGINA ===
 $(document).ready(function() {
-    // Inicializar contador FlipClock
+    // Calcular tiempo hasta el evento
     var fechaEvento = moment.tz("2026-01-24 16:00", "America/Guatemala");
-    
-    $('.clock').FlipClock(fechaEvento, {
+    var ahora = moment();
+    var diferencia = fechaEvento.diff(ahora, 'seconds');
+
+    // Inicializar contador FlipClock REGRESIVO
+    $('.clock').FlipClock(diferencia, {
         clockFace: 'DailyCounter',
         countdown: true,
-        language: 'es'
+        language: 'es',
+        callbacks: {
+            stop: function() {
+                console.log('¡El evento ha llegado!');
+            }
+        }
     });
 
     // Traducir etiquetas al español
@@ -42,7 +50,7 @@ $(document).ready(function() {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
-        }, 700, 'easeInOutExpo');
+        }, 700);
         return false;
     });
 
@@ -74,6 +82,7 @@ $(document).ready(function() {
 
     console.log('✅ Invitación digital cargada correctamente');
     console.log('💕 Herberth & Andrea - 24 de Enero 2026');
+    console.log('⏰ Contador regresivo funcionando correctamente');
 });
 
 // === CONTROL DE MÚSICA ===
