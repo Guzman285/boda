@@ -258,11 +258,11 @@ body {
     }
 }
 
-/* Imagen decorativa entre nombres y fecha - MÁS OSCURA */
+/* Imagen decorativa entre nombres y fecha - MÁS GRANDE Y MÁS OSCURA */
 .imagen-decorativa {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
-    margin: 15px auto;
+    margin: 20px auto;
     display: block;
     filter: brightness(0) invert(0.7);
     opacity: 0.85;
@@ -323,7 +323,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* === CONTADOR FLIPCLOCK === */
+/* === CONTADOR FLIPCLOCK - AJUSTADO === */
 .flipTimebox {
     margin: 40px auto;
     text-align: center;
@@ -357,7 +357,7 @@ body {
 
 .flip-clock-wrapper ul li {
     line-height: 100px !important;
-    font-size: 60px !important;
+    font-size: 56px !important;
 }
 
 .flip-clock-divider {
@@ -397,7 +397,7 @@ body {
 
     .flip-clock-wrapper ul li {
         line-height: 80px !important;
-        font-size: 48px !important;
+        font-size: 44px !important;
     }
 
     .flip-clock-divider {
@@ -428,7 +428,7 @@ body {
     }
 
     .imagen-decorativa {
-        max-width: 90px;
+        max-width: 120px;
     }
 }
 
@@ -444,8 +444,8 @@ body {
     }
 
     .imagen-decorativa {
-        max-width: 50px;
-        margin: 8px auto;
+        max-width: 80px;
+        margin: 12px auto;
     }
 
     .fecha-elegante {
@@ -472,20 +472,20 @@ body {
     }
 
     .flip-clock-wrapper ul {
-        width: 40px !important;
-        height: 52px !important;
+        width: 42px !important;
+        height: 55px !important;
         margin: 0 2px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 52px !important;
-        font-size: 32px !important;
+        line-height: 55px !important;
+        font-size: 30px !important;
     }
 
     .flip-clock-divider {
         width: 16px !important;
         margin: 0 2px !important;
-        height: 52px !important;
+        height: 55px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
@@ -519,8 +519,8 @@ body {
     }
 
     .imagen-decorativa {
-        max-width: 40px;
-        margin: 6px auto;
+        max-width: 65px;
+        margin: 10px auto;
     }
 
     .fecha-elegante {
@@ -546,20 +546,20 @@ body {
     }
 
     .flip-clock-wrapper ul {
-        width: 34px !important;
-        height: 44px !important;
+        width: 36px !important;
+        height: 47px !important;
         margin: 0 1.5px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 44px !important;
-        font-size: 27px !important;
+        line-height: 47px !important;
+        font-size: 26px !important;
     }
 
     .flip-clock-divider {
         width: 13px !important;
         margin: 0 1.5px !important;
-        height: 44px !important;
+        height: 47px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
@@ -593,8 +593,8 @@ body {
     }
 
     .imagen-decorativa {
-        max-width: 35px;
-        margin: 5px auto;
+        max-width: 55px;
+        margin: 8px auto;
     }
 
     .fecha-elegante {
@@ -620,24 +620,24 @@ body {
     }
 
     .flip-clock-wrapper ul {
-        width: 30px !important;
-        height: 38px !important;
+        width: 32px !important;
+        height: 42px !important;
         margin: 0 1px !important;
     }
 
     .flip-clock-wrapper ul li {
-        line-height: 38px !important;
+        line-height: 42px !important;
         font-size: 23px !important;
     }
 
     .flip-clock-divider {
         width: 11px !important;
         margin: 0 1px !important;
-        height: 38px !important;
+        height: 42px !important;
     }
 
     .flip-clock-divider .flip-clock-label {
-        top: 45px !important;
+        top: 47px !important;
         right: -18px !important;
         width: 38px !important;
         font-size: 7px !important;
