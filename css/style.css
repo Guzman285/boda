@@ -1226,75 +1226,140 @@ body {
     font-size: 1rem;
 }
 
-/* === TIMELINE === */
-.timeline {
-    max-width: 600px;
+/* === ITINERARIO VERTICAL NUEVO DISEÑO === */
+.timeline-vertical {
+    max-width: 500px;
     margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-item-vertical {
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, #4A90C8, #FFD700);
-    transform: translateX(-50%);
+.timeline-item-vertical:last-child {
+    margin-bottom: 0;
 }
 
-.timeline-item {
+.timeline-icono {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border: 3px solid #B8CBD9;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
-    position: relative;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.timeline-icono i {
+    font-size: 26px;
+    color: #2C5F8D;
+}
+
+.timeline-linea {
+    position: absolute;
+    left: 35px;
+    top: 70px;
+    width: 2px;
+    height: 60px;
+    background: #B8CBD9;
+    z-index: 1;
+}
+
+.timeline-item-vertical:last-child .timeline-linea {
+    display: none;
+}
+
+.timeline-info {
+    margin-left: 30px;
+    padding-top: 12px;
+}
+
+.timeline-titulo {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
 }
 
 .timeline-hora {
-    flex: 0 0 80px;
-    text-align: right;
-    padding-right: 30px;
-    font-weight: 600;
-    color: #2C5F8D;
-    font-size: 16px;
-}
-
-.timeline-contenido {
-    flex: 1;
-    background: white;
-    padding: 20px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    position: relative;
-}
-
-.timeline-contenido::before {
-    content: '';
-    position: absolute;
-    left: -15px;
-    width: 15px;
-    height: 15px;
-    background: #FFD700;
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px #f9f9f9;
-}
-
-.timeline-contenido i {
-    font-size: 1.8rem;
-    color: #2C5F8D;
-}
-
-.timeline-contenido p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #666;
     margin: 0;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
+    font-style: italic;
+}
+
+/* Responsive Itinerario */
+@media (max-width: 768px) {
+    .timeline-vertical {
+        padding: 20px 0;
+    }
+
+    .timeline-item-vertical {
+        margin-bottom: 40px;
+    }
+
+    .timeline-icono {
+        width: 60px;
+        height: 60px;
+    }
+
+    .timeline-icono i {
+        font-size: 22px;
+    }
+
+    .timeline-linea {
+        left: 30px;
+        top: 60px;
+        height: 50px;
+    }
+
+    .timeline-titulo {
+        font-size: 18px;
+    }
+
+    .timeline-hora {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-icono {
+        width: 55px;
+        height: 55px;
+    }
+
+    .timeline-icono i {
+        font-size: 20px;
+    }
+
+    .timeline-linea {
+        left: 27.5px;
+        top: 55px;
+        height: 45px;
+    }
+
+    .timeline-info {
+        margin-left: 20px;
+    }
+
+    .timeline-titulo {
+        font-size: 16px;
+    }
+
+    .timeline-hora {
+        font-size: 15px;
+    }
 }
 
 /* === CÓDIGO DE VESTIMENTA UNIFICADO === */
