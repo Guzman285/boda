@@ -846,6 +846,21 @@ body {
     .seccion-reproductor {
         padding: 40px 0;
     }
+    .seccion-reproductor .container,
+    .seccion-reproductor .row,
+    .seccion-reproductor [class*="col-"] {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .reproductor-elegante {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
 
     .reproductor-elegante {
         padding: 30px 20px;
