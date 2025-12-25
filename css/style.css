@@ -289,7 +289,7 @@ body {
 /* === VERSÍCULO - SOLO ESTE MÁS GRANDE === */
 .versiculo {
     font-family: 'Sacramento', cursive;
-    font-size: 42px;
+    font-size: 70px;
     color: white;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     line-height: 1.7;
@@ -315,7 +315,7 @@ body {
 
 .versiculo-referencia {
     font-family: 'Work Sans', sans-serif;
-    font-size: 28px;
+    font-size: 60px;
     margin-top: 15px;
     display: block;
     font-weight: 400;
