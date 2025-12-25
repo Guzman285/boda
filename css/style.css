@@ -1161,9 +1161,10 @@ body {
     text-align: center;
 }
 
+/* LOGO CEMACO - ESPACIADO REDUCIDO */
 .logo-regalo {
-    height: 120px;
-    margin: 10px 0;
+    height: 80px;
+    margin: 5px 0;
 }
 
 .opcion-regalo-item h3 {
@@ -1555,6 +1556,11 @@ body {
     .divisor-vestimenta {
         display: none;
     }
+
+    /* Logo Cemaco más pequeño en tablets */
+    .logo-regalo {
+        height: 70px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1660,6 +1666,11 @@ body {
     .detalle-info {
         font-size: 14px;
     }
+
+    /* Logo Cemaco aún más pequeño en móviles */
+    .logo-regalo {
+        height: 60px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1684,5 +1695,10 @@ body {
     .imagen-vestido,
     .imagen-traje {
         max-width: 90px;
+    }
+
+    /* Logo Cemaco muy pequeño en móviles pequeños */
+    .logo-regalo {
+        height: 55px;
     }
 }
