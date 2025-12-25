@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Boda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @page {
+            margin: 10mm;
+            size: A4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5f3e0 0%, #e8e3d3 100%);
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .contenedor-principal {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #pdf-content {
+            background: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            border: 6px solid #d4a574;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .titulo-boda {
+            font-size: 28px;
+            color: #2c3e50;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .nombres {
+            font-family: 'Brush Script MT', 'Bradley Hand', cursive;
+            font-size: 64px;
+            color: #2C5F8D;
+            margin: 25px 0;
+            font-weight: normal;
+            font-style: italic;
+            line-height: 1.1;
+        }
+
+        .decorativo {
+            font-size: 30px;
+            color: #d4a574;
+            margin: 20px 0;
+        }
+
+        .fecha {
+            font-size: 24px;
+            color: #555;
+            letter-spacing: 8px;
+            margin: 20px 0;
+            font-weight: normal;
+        }
+
+        .sobre-container {
+            margin: 25px 0 20px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sobre-link {
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .sobre-link:hover {
+            transform: scale(1.05);
+        }
+
+        .sobre-imagen {
+            width: 220px;
+            height: auto;
+            border-radius: 15px;
+            border: 4px solid #d4a574;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+
+        .linea {
+            width: 120px;
+            height: 2px;
+            background: #d4a574;
+            margin: 20px auto;
+        }
+
+        .mensaje {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(212, 165, 116, 0.15);
+            border-radius: 15px;
+            border-left: 5px solid #d4a574;
+        }
+
+        .mensaje p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            font-family: 'Georgia', serif;
+            margin: 0;
+        }
+
+        .lugares {
+            margin: 25px 0 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(44, 95, 141, 0.12) 0%, rgba(212, 165, 116, 0.12) 100%);
+            border-radius: 15px;
+            border: 3px solid #d4a574;
+        }
+
+        .lugares-titulo {
+            font-size: 14px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .numero-lugares {
+            font-family: 'Georgia', serif;
+            font-size: 60px;
+            color: #2C5F8D;
+            font-weight: bold;
+            margin: 12px 0;
+            text-shadow: 2px 2px 4px rgba(44, 95, 141, 0.2);
+        }
+
+        .lugares-texto {
+            font-size: 14px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 3px solid #d4a574;
+            font-size: 14px;
+            color: #888;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .contenedor-principal {
+                padding: 0;
+                min-height: auto;
+            }
+
+            #pdf-content {
+                box-shadow: none;
+                border: 4px solid #d4a574;
+                page-break-inside: avoid;
+                padding: 30px 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div id="pdf-content">
+            <!-- Título -->
+            <div class="titulo-boda">♦ NUESTRA BODA ♦</div>
+
+            <!-- Nombres -->
+            <div class="nombres">Guzmán & Masella</div>
+
+            <div class="decorativo">✿ ✿ ✿</div>
+
+            <!-- Fecha -->
+            <div class="fecha">24 · ENERO · 2026</div>
+
+            <div class="linea"></div>
+
+            <!-- Sobre con imagen clickeable -->
+            <div class="sobre-container">
+                <a href="https://guzman285.github.io/boda/" target="_blank" class="sobre-link" title="Haz clic para ver la invitación completa">
+                    <img src="https://raw.githubusercontent.com/Guzman285/boda/main/images/generated.png" alt="Sobre invitación" class="sobre-imagen">
+                </a>
+            </div>
+
+            <div class="linea"></div>
+
+            <!-- Mensaje personalizado -->
+            <div class="mensaje">
+                <p>Es un honor compartir con ustedes este momento tan importante. Por cuestiones de espacio, la invitación es solo para dos personas. Gracias por comprender.</p>
+            </div>
+
+            <!-- Lugares Reservados -->
+            <div class="lugares">
+                <div class="lugares-titulo">Hemos Reservado</div>
+                <div class="numero-lugares">2</div>
+                <div class="lugares-texto">Lugares en su honor</div>
+            </div>
+
+            <div class="footer">
+                ¡Los esperamos con mucho cariño!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
