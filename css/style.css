@@ -323,374 +323,64 @@ body {
     letter-spacing: 2px;
 }
 
-/* === CONTADOR FLIPCLOCK - AJUSTADO === */
-.flipTimebox {
+/* === CONTADOR ELEGANTE PERSONALIZADO === */
+.contador-elegante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin: 40px auto;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 700px;
+}
+
+.contador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contador-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    min-width: 90px;
     text-align: center;
-    width: 100%;
-    overflow: visible;
 }
 
-.flipTimebox .clock {
-    display: inline-block;
-    margin: 0 auto;
+.contador-etiqueta {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.flip-clock-wrapper {
-    display: inline-flex !important;
-    flex-wrap: nowrap !important;
-    width: auto !important;
-    white-space: nowrap !important;
-    justify-content: center !important;
-    align-items: center !important;
+.contador-separador {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 5px;
+    line-height: 1;
+    margin-top: -30px;
 }
 
-/* Tamaños por defecto (escritorio) */
-.flip-clock-wrapper ul {
-    width: 80px !important;
-    height: 100px !important;
-    float: none !important;
-    margin: 0 5px !important;
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-}
-
-.flip-clock-wrapper ul li {
-    line-height: 100px !important;
-    font-size: 56px !important;
-}
-
-.flip-clock-divider {
-    float: none !important;
-    width: 30px !important;
-    margin: 0 5px !important;
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-    height: 100px !important;
-}
-
-.flip-clock-divider .flip-clock-label {
-    position: absolute;
-    top: 110px !important;
-    right: -50px !important;
-    width: 100px !important;
-    font-size: 14px !important;
-    text-align: center;
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.flip-clock-divider .flip-clock-dot {
-    width: 8px !important;
-    height: 8px !important;
-    background: #FFD700;
-    border-radius: 50%;
-}
-
-/* Tablets */
-@media (max-width: 992px) {
-    .flip-clock-wrapper ul {
-        width: 60px !important;
-        height: 80px !important;
-        margin: 0 4px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 80px !important;
-        font-size: 44px !important;
-    }
-
-    .flip-clock-divider {
-        width: 24px !important;
-        margin: 0 4px !important;
-        height: 80px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        top: 90px !important;
-        right: -40px !important;
-        width: 80px !important;
-        font-size: 12px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 6px !important;
-        height: 6px !important;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 64px;
-    }
-
-    .fecha-elegante {
-        font-size: 40px;
-        letter-spacing: 10px;
-    }
-
-    .imagen-decorativa {
-        max-width: 130px;
-    }
-}
-
-/* Móviles grandes - SOLO VERSÍCULO MÁS GRANDE */
-@media (max-width: 768px) {
-    .display-tc {
-        padding: 60px 0 40px;
-        width: 100%;
-        display: block;
-    }
-
-    .fh5co-cover .container {
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
-    }
-
-    .fh5co-cover .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .fh5co-cover [class*="col-"] {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    /* Nombres IGUAL que antes */
-    .fh5co-cover h1 {
-        font-size: 32px;
-        margin-bottom: 8px;
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    /* Imagen IGUAL que antes */
-    .imagen-decorativa {
-        max-width: 90px;
-        margin: 10px auto;
-    }
-
-    /* Fecha IGUAL que antes */
-    .fecha-elegante {
-        font-size: 21px;
-        letter-spacing: 4px;
-        margin: 10px 0;
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    /* SOLO EL VERSÍCULO MÁS GRANDE */
-    .versiculo {
-        font-size: 24px;
-        padding: 0 15px;
-        line-height: 1.5;
-        margin: 15px auto;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .versiculo-referencia {
-        font-size: 20px;
-        margin-top: 10px;
-        letter-spacing: 1px;
-    }
-
-    .flipTimebox {
-        margin: 18px auto;
-        padding: 0;
-        width: 100%;
-    }
-
-    /* CONTADOR IGUAL que antes - NO MÁS GRANDE */
-    .flip-clock-wrapper ul {
-        width: 42px !important;
-        height: 55px !important;
-        margin: 0 2px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 55px !important;
-        font-size: 30px !important;
-    }
-
-    .flip-clock-divider {
-        width: 16px !important;
-        margin: 0 2px !important;
-        height: 55px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        top: 62px !important;
-        right: -28px !important;
-        width: 55px !important;
-        font-size: 9px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 4px !important;
-        height: 4px !important;
-    }
-
-    .btn {
-        padding: 10px 24px;
-        font-size: 13px;
-        margin: 10px 5px;
-    }
-}
-
-/* Móviles medianos */
-@media (max-width: 480px) {
-    .display-tc {
-        padding: 55px 0 35px;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 28px;
-        margin-bottom: 7px;
-    }
-
-    .imagen-decorativa {
-        max-width: 80px;
-        margin: 8px auto;
-    }
-
-    .fecha-elegante {
-        font-size: 18px;
-        letter-spacing: 3px;
-        margin: 8px 0;
-    }
-
-    /* VERSÍCULO MÁS GRANDE */
-    .versiculo {
-        font-size: 21px;
-        padding: 0 12px;
-        line-height: 1.45;
-        margin: 12px auto;
-    }
-
-    .versiculo-referencia {
-        font-size: 18px;
-        margin-top: 8px;
-    }
-
-    .flipTimebox {
-        margin: 15px auto;
-    }
-
-    .flip-clock-wrapper ul {
-        width: 36px !important;
-        height: 47px !important;
-        margin: 0 1.5px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 47px !important;
-        font-size: 26px !important;
-    }
-
-    .flip-clock-divider {
-        width: 13px !important;
-        margin: 0 1.5px !important;
-        height: 47px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        top: 52px !important;
-        right: -23px !important;
-        width: 45px !important;
-        font-size: 8px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 3.5px !important;
-        height: 3.5px !important;
-    }
-
-    .btn {
-        padding: 8px 20px;
-        font-size: 12px;
-        margin: 10px 4px;
-    }
-}
-
-/* Móviles pequeños */
-@media (max-width: 360px) {
-    .display-tc {
-        padding: 50px 0 30px;
-    }
-
-    .fh5co-cover h1 {
-        font-size: 24px;
-        margin-bottom: 6px;
-    }
-
-    .imagen-decorativa {
-        max-width: 65px;
-        margin: 6px auto;
-    }
-
-    .fecha-elegante {
-        font-size: 16px;
-        letter-spacing: 2px;
-        margin: 6px 0;
-    }
-
-    /* VERSÍCULO MÁS GRANDE */
-    .versiculo {
-        font-size: 19px;
-        line-height: 1.4;
-        padding: 0 10px;
-        margin: 10px auto;
-    }
-
-    .versiculo-referencia {
-        font-size: 16px;
-        margin-top: 7px;
-    }
-
-    .flipTimebox {
-        margin: 12px auto;
-    }
-
-    .flip-clock-wrapper ul {
-        width: 32px !important;
-        height: 42px !important;
-        margin: 0 1px !important;
-    }
-
-    .flip-clock-wrapper ul li {
-        line-height: 42px !important;
-        font-size: 23px !important;
-    }
-
-    .flip-clock-divider {
-        width: 11px !important;
-        margin: 0 1px !important;
-        height: 42px !important;
-    }
-
-    .flip-clock-divider .flip-clock-label {
-        top: 47px !important;
-        right: -18px !important;
-        width: 38px !important;
-        font-size: 7px !important;
-    }
-
-    .flip-clock-divider .flip-clock-dot {
-        width: 3px !important;
-        height: 3px !important;
-    }
-
-    .btn {
-        padding: 7px 18px;
-        font-size: 11px;
-        margin: 8px 4px;
-    }
+/* === CONTADOR FLIPCLOCK - OCULTAR === */
+.flipTimebox {
+    display: none !important;
 }
 
 /* === BOTÓN === */
@@ -1397,6 +1087,28 @@ body {
     .timeline-hora {
         font-size: 16px;
     }
+    
+    /* Responsive Contador Móvil */
+    .contador-elegante {
+        gap: 10px;
+        padding: 25px 15px;
+        margin: 30px auto;
+    }
+    
+    .contador-numero {
+        font-size: 48px;
+        min-width: 65px;
+    }
+    
+    .contador-etiqueta {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+    
+    .contador-separador {
+        font-size: 36px;
+        margin-top: -20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1429,6 +1141,54 @@ body {
 
     .timeline-hora {
         font-size: 15px;
+    }
+    
+    /* Responsive Contador Móvil Pequeño */
+    .contador-elegante {
+        gap: 8px;
+        padding: 20px 10px;
+        margin: 25px auto;
+    }
+    
+    .contador-numero {
+        font-size: 36px;
+        min-width: 50px;
+    }
+    
+    .contador-etiqueta {
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-top: 6px;
+    }
+    
+    .contador-separador {
+        font-size: 28px;
+        margin-top: -15px;
+        padding: 0 3px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Responsive Contador Móvil Muy Pequeño */
+    .contador-elegante {
+        gap: 5px;
+        padding: 18px 8px;
+    }
+    
+    .contador-numero {
+        font-size: 32px;
+        min-width: 45px;
+    }
+    
+    .contador-etiqueta {
+        font-size: 8px;
+        margin-top: 5px;
+    }
+    
+    .contador-separador {
+        font-size: 24px;
+        margin-top: -12px;
+        padding: 0 2px;
     }
 }
 
@@ -1667,6 +1427,19 @@ body {
     .imagen-traje {
         max-width: 150px;
     }
+    
+    .fh5co-cover h1 {
+        font-size: 64px;
+    }
+
+    .fecha-elegante {
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+
+    .imagen-decorativa {
+        max-width: 130px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1754,6 +1527,74 @@ body {
 
     .divisor-vestimenta {
         display: none;
+    }
+    
+    .display-tc {
+        padding: 60px 0 40px;
+        width: 100%;
+        display: block;
+    }
+
+    .fh5co-cover .container {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .fh5co-cover .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .fh5co-cover [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .imagen-decorativa {
+        max-width: 90px;
+        margin: 10px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 21px;
+        letter-spacing: 4px;
+        margin: 10px 0;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .versiculo {
+        font-size: 24px;
+        padding: 0 15px;
+        line-height: 1.5;
+        margin: 15px auto;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .versiculo-referencia {
+        font-size: 20px;
+        margin-top: 10px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 13px;
+        margin: 10px 5px;
     }
 }
 
@@ -1844,6 +1685,44 @@ body {
     .detalle-info {
         font-size: 14px;
     }
+    
+    .display-tc {
+        padding: 55px 0 35px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 28px;
+        margin-bottom: 7px;
+    }
+
+    .imagen-decorativa {
+        max-width: 80px;
+        margin: 8px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 18px;
+        letter-spacing: 3px;
+        margin: 8px 0;
+    }
+
+    .versiculo {
+        font-size: 21px;
+        padding: 0 12px;
+        line-height: 1.45;
+        margin: 12px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        margin: 10px 4px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1854,5 +1733,43 @@ body {
     .imagen-vestido,
     .imagen-traje {
         max-width: 90px;
+    }
+    
+    .display-tc {
+        padding: 50px 0 30px;
+    }
+
+    .fh5co-cover h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .imagen-decorativa {
+        max-width: 65px;
+        margin: 6px auto;
+    }
+
+    .fecha-elegante {
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin: 6px 0;
+    }
+
+    .versiculo {
+        font-size: 19px;
+        line-height: 1.4;
+        padding: 0 10px;
+        margin: 10px auto;
+    }
+
+    .versiculo-referencia {
+        font-size: 16px;
+        margin-top: 7px;
+    }
+
+    .btn {
+        padding: 7px 18px;
+        font-size: 11px;
+        margin: 8px 4px;
     }
 }
