@@ -885,6 +885,12 @@ body {
     color: white;
 }
 
+/* ÍCONO DE WHATSAPP MÁS GRANDE */
+.boton-principal img {
+    width: 50px !important;
+    height: 50px !important;
+}
+
 .boton-contorno {
     background: white;
     color: #2C5F8D;
@@ -1161,16 +1167,17 @@ body {
     text-align: center;
 }
 
-/* LOGO CEMACO - ESPACIADO REDUCIDO */
+/* LOGO CEMACO CON MENOS ESPACIO ARRIBA Y ABAJO */
 .logo-regalo {
-    height: 80px;
-    margin: 5px 0;
+    height: 100px;
+    margin: 0;
+    padding: 0;
 }
 
 .opcion-regalo-item h3 {
     color: #2C5F8D;
     font-size: 22px;
-    margin: 15px 0;
+    margin: 10px 0 15px;
 }
 
 .opcion-regalo-item p {
@@ -1557,9 +1564,10 @@ body {
         display: none;
     }
 
-    /* Logo Cemaco más pequeño en tablets */
-    .logo-regalo {
-        height: 70px;
+    /* ÍCONO WHATSAPP MÁS GRANDE EN MÓVIL */
+    .boton-principal img {
+        width: 45px !important;
+        height: 45px !important;
     }
 }
 
@@ -1667,9 +1675,10 @@ body {
         font-size: 14px;
     }
 
-    /* Logo Cemaco aún más pequeño en móviles */
-    .logo-regalo {
-        height: 60px;
+    /* ÍCONO WHATSAPP AJUSTADO EN MÓVILES PEQUEÑOS */
+    .boton-principal img {
+        width: 40px !important;
+        height: 40px !important;
     }
 }
 
@@ -1695,10 +1704,5 @@ body {
     .imagen-vestido,
     .imagen-traje {
         max-width: 90px;
-    }
-
-    /* Logo Cemaco muy pequeño en móviles pequeños */
-    .logo-regalo {
-        height: 55px;
     }
 }
