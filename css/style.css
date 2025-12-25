@@ -1026,68 +1026,100 @@ body {
     font-weight: 500;
 }
 
-/* === CÓDIGO DE VESTIMENTA === */
-.etiqueta-formal {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #2C5F8D;
-    text-transform: uppercase;
-    border-bottom: 3px solid #4A90C8;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.tarjeta-vestimenta {
+/* === CÓDIGO DE VESTIMENTA UNIFICADO === */
+.tarjeta-vestimenta-unificada {
     background: white;
     border-radius: 15px;
-    padding: 40px;
-    margin: 10px;
+    padding: 50px 40px;
+    margin: 20px auto;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    min-height: 280px;
     text-align: center;
+    max-width: 900px;
 }
 
-.tarjeta-vestimenta h3 {
+.titulo-vestimenta {
+    font-family: 'Sacramento', cursive;
+    font-size: 36px;
     color: #2C5F8D;
-    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.imagenes-vestimenta {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.imagen-vestido,
+.imagen-traje {
+    max-width: 180px;
+    height: auto;
+}
+
+.especificaciones-vestimenta {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.especificacion-mujer,
+.especificacion-hombre {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.especificacion-mujer h4,
+.especificacion-hombre h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C5F8D;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.tarjeta-vestimenta p {
+.detalle-principal {
     font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
 }
 
-.nota-colores {
+.detalle-nota {
     font-size: 14px;
     color: #999;
     font-style: italic;
+    margin: 5px 0;
 }
 
-.icono-vestimenta {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.detalle-info {
+    font-size: 16px;
+    color: #666;
+    margin: 8px 0;
 }
 
-.icono-vestimenta-mujer {
-    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+.divisor-vestimenta {
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #2C5F8D, transparent);
+    min-height: 150px;
 }
 
-.icono-vestimenta-hombre {
-    background: linear-gradient(135deg, #4A90C8 0%, #2C5F8D 100%);
-}
-
-.icono-vestimenta span {
-    font-size: 45px;
-    color: white;
+.nota-especial {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
 }
 
 /* === MESA DE REGALOS === */
@@ -1406,15 +1438,18 @@ body {
         margin: 20px 10px;
     }
 
-    .tarjeta-vestimenta {
-        min-height: auto;
-        padding: 30px 20px;
-        margin: 10px;
-    }
-
     .opciones-regalo {
         flex-direction: column;
         align-items: center;
+    }
+
+    .imagenes-vestimenta {
+        gap: 30px;
+    }
+
+    .imagen-vestido,
+    .imagen-traje {
+        max-width: 150px;
     }
 }
 
@@ -1494,6 +1529,32 @@ body {
     .tarjeta-adultos-solo p {
         font-size: 16px;
     }
+
+    .tarjeta-vestimenta-unificada {
+        padding: 40px 30px;
+    }
+
+    .titulo-vestimenta {
+        font-size: 32px;
+    }
+
+    .imagenes-vestimenta {
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .imagen-vestido,
+    .imagen-traje {
+        max-width: 120px;
+    }
+
+    .especificaciones-vestimenta {
+        gap: 40px;
+    }
+
+    .divisor-vestimenta {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1560,6 +1621,45 @@ body {
     .tarjeta-adultos-solo p {
         font-size: 15px;
     }
+
+    .tarjeta-vestimenta-unificada {
+        padding: 30px 20px;
+    }
+
+    .titulo-vestimenta {
+        font-size: 28px;
+    }
+
+    .imagenes-vestimenta {
+        gap: 15px;
+        margin: 25px 0;
+    }
+
+    .imagen-vestido,
+    .imagen-traje {
+        max-width: 100px;
+    }
+
+    .especificaciones-vestimenta {
+        gap: 30px;
+    }
+
+    .especificacion-mujer h4,
+    .especificacion-hombre h4 {
+        font-size: 18px;
+    }
+
+    .detalle-principal {
+        font-size: 16px;
+    }
+
+    .detalle-nota {
+        font-size: 13px;
+    }
+
+    .detalle-info {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1579,5 +1679,10 @@ body {
     .boton-reproductor {
         width: 40px;
         height: 40px;
+    }
+
+    .imagen-vestido,
+    .imagen-traje {
+        max-width: 90px;
     }
 }
