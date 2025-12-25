@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Boda - 1 Persona</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .contenedor-principal {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .boton-generar {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #4A90C8 0%, #2C5F8D 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(44, 95, 141, 0.3);
+            transition: all 0.3s;
+        }
+
+        .boton-generar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(44, 95, 141, 0.4);
+        }
+
+        #pdf-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Georgia', serif;
+        }
+
+        .titulo-boda {
+            font-size: 24px;
+            color: #333;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .nombres {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 72px;
+            color: #2C5F8D;
+            margin: 20px 0;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .fecha {
+            font-size: 28px;
+            color: #333;
+            letter-spacing: 8px;
+            margin: 20px 0;
+            font-weight: normal;
+        }
+
+        .sobre-container {
+            margin: 40px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sobre {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(135deg, #B8CBD9 0%, #A0B8CA 100%);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .sello {
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at 30% 30%, #FFE066, #FFD700);
+            border: 3px solid rgba(255, 215, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            transform: rotate(-20deg);
+        }
+
+        .linea-puntada {
+            position: absolute;
+            width: 80%;
+            height: 2px;
+            border-top: 2px dashed rgba(255, 215, 0, 0.8);
+            top: 50%;
+            left: 10%;
+        }
+
+        .texto-sobre {
+            font-size: 18px;
+            color: #2C5F8D;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .texto-sobre:hover {
+            color: #FFD700;
+            transform: scale(1.05);
+        }
+
+        .click-abrir {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+            font-style: italic;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .lugares {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(44, 95, 141, 0.1);
+            border-radius: 10px;
+        }
+
+        .lugares-titulo {
+            font-size: 16px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .numero-lugares {
+            font-family: 'Georgia', serif;
+            font-size: 64px;
+            color: #2C5F8D;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .lugares-texto {
+            font-size: 16px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .informacion {
+            background: #FFF9E6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #FFD700;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .informacion p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <button class="boton-generar" onclick="generarPDF()">📥 Descargar PDF - 1 Persona</button>
+
+        <div id="pdf-content">
+            <!-- Título -->
+            <div class="titulo-boda">NUESTRA BODA</div>
+
+            <!-- Nombres -->
+            <div class="nombres">Mariana & Daniel</div>
+
+            <!-- Fecha -->
+            <div class="fecha">29-AGOSTO-2025</div>
+
+            <!-- Sobre con sello -->
+            <div class="sobre-container">
+                <div class="sobre">
+                    <div class="linea-puntada"></div>
+                    <a href="https://guzman285.github.io/boda/" class="texto-sobre">ABRIR INVITACIÓN</a>
+                    <div class="sello">💌</div>
+                </div>
+            </div>
+
+            <div class="click-abrir">Click para abrir la invitación digital</div>
+
+            <!-- Lugares Reservados -->
+            <div class="lugares">
+                <div class="lugares-titulo">Hemos Reservado</div>
+                <div class="numero-lugares">1</div>
+                <div class="lugares-texto">Lugar en su honor</div>
+            </div>
+
+            <!-- Información -->
+            <div class="informacion">
+                <p><strong>Nota:</strong> Este PDF contiene un enlace interactivo. Al hacer clic en "ABRIR INVITACIÓN", será redirigido a la invitación digital completa.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generarPDF() {
+            const element = document.getElementById('pdf-content');
+            const opt = {
+                margin: 10,
+                filename: 'Invitacion_Boda_Guzan_Masella_1_Persona.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+</body>
+</html>
