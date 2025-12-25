@@ -1,150 +1,151 @@
-/* ============================================
-   INVITACIÓN DIGITAL - JAVASCRIPT
-   Funcionalidades: FlipClock, Música, Modal, Menú
-============================================ */
+// ============================================
+// INVITACIÓN DIGITAL - GUZMÁN & MASELLA
+// JavaScript para interactividad
+// ============================================
 
-// === VARIABLES GLOBALES ===
-let musicaReproduciendo = false;
-let eventoSeleccionado = '';
+// === CONTADOR REGRESIVO ===
+function iniciarContador() {
+    var fechaBoda = new Date('2026-01-24 16:00:00').getTime();
 
-// === INICIALIZACIÓN AL CARGAR LA PÁGINA ===
-$(document).ready(function() {
-    // Calcular tiempo hasta el evento
-    var fechaEvento = moment.tz("2026-01-24 16:00", "America/Guatemala");
-    var ahora = moment();
-    var diferencia = fechaEvento.diff(ahora, 'seconds');
+    var intervalo = setInterval(function() {
+        var ahora = new Date().getTime();
+        var distancia = fechaBoda - ahora;
 
-    // Inicializar contador FlipClock REGRESIVO
-    $('.clock').FlipClock(diferencia, {
-        clockFace: 'DailyCounter',
-        countdown: true,
-        language: 'es',
-        callbacks: {
-            stop: function() {
-                console.log('¡El evento ha llegado!');
-            }
+        var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        if (distancia < 0) {
+            clearInterval(intervalo);
         }
-    });
+    }, 1000);
+}
 
-    // Traducir etiquetas al español
-    setTimeout(function() {
-        $('.flip-clock-label').each(function() {
-            var texto = $(this).text().toLowerCase();
-            if (texto === 'days') $(this).text('Días');
-            if (texto === 'hours') $(this).text('Horas');
-            if (texto === 'minutes') $(this).text('Minutos');
-            if (texto === 'seconds') $(this).text('Segundos');
+// === FLIPCLOCK ===
+function iniciarFlipClock() {
+    var fechaBoda = new Date('2026-01-24 16:00:00').getTime();
+    var ahora = new Date().getTime();
+    var diferencia = Math.floor((fechaBoda - ahora) / 1000);
+
+    if (diferencia > 0) {
+        var clock = $('.clock').FlipClock(diferencia, {
+            clockFace: 'DailyCounter',
+            countdown: true,
+            language: 'es',
+            labels: ['Días', 'Horas', 'Minutos', 'Segundos']
         });
-    }, 100);
-
-    // Smooth scroll para enlaces internos
-    $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top - 80
-                }, 1000);
-                return false;
-            }
-        }
-    });
-
-    // Intentar reproducir música automáticamente
-    var audio = document.getElementById('musica-fondo');
-    var promesaReproduccion = audio.play();
-    if (promesaReproduccion !== undefined) {
-        promesaReproduccion.then(function() {
-            musicaReproduciendo = true;
-            document.getElementById('icono-musica').className = 'fa fa-pause';
-        }).catch(function() {
-            console.log('Reproducción automática bloqueada por el navegador');
-        });
-    }
-
-    console.log('✅ Invitación digital cargada correctamente');
-    console.log('💕 Guzmán & Masella - 24 de Enero 2026');
-    console.log('⏰ Contador regresivo funcionando correctamente');
-});
-
-// === CONTROL DE MÚSICA ===
-function alternarMusica() {
-    var audio = document.getElementById('musica-fondo');
-    
-    if (musicaReproduciendo) {
-        audio.pause();
-        document.getElementById('icono-musica').className = 'fa fa-play';
-        musicaReproduciendo = false;
-    } else {
-        audio.play();
-        document.getElementById('icono-musica').className = 'fa fa-pause';
-        musicaReproduciendo = true;
     }
 }
 
-// === FUNCIONES DEL MODAL ===
+// === MENÚ RESPONSIVE ===
+function toggleMenu() {
+    document.getElementById('mainMenu').classList.toggle('active');
+}
+
+function closeMenu() {
+    document.getElementById('mainMenu').classList.remove('active');
+}
+
+// === MODAL DE CONFIRMACIÓN ===
 function abrirModal(evento) {
-    eventoSeleccionado = evento;
+    var modal = document.getElementById('modalAsistencia');
     var subtitulo = document.getElementById('subtituloEvento');
 
     if (evento === 'ceremonia') {
-        subtitulo.textContent = 'Ceremonia Religiosa - 24 Enero 2026, 16:00 hrs';
+        subtitulo.textContent = 'Ceremonia Religiosa - 4:00 PM';
     } else if (evento === 'recepcion') {
-        subtitulo.textContent = 'Recepción - 24 Enero 2026, 18:00 hrs';
+        subtitulo.textContent = 'Cóctel y Recepción - 5:00 PM';
     }
 
-    document.getElementById('modalAsistencia').style.display = 'flex';
+    modal.style.display = 'flex';
 }
 
 function cerrarModal() {
     document.getElementById('modalAsistencia').style.display = 'none';
 }
 
-// Cerrar modal al hacer clic fuera del contenido
-window.addEventListener('click', function(evento) {
-    var modal = document.getElementById('modalAsistencia');
-    if (evento.target === modal) {
-        cerrarModal();
-    }
-});
-
-// === CONFIRMACIÓN POR WHATSAPP ===
 function confirmarNovia() {
-    var mensaje = '';
-    
-    if (eventoSeleccionado === 'ceremonia') {
-        mensaje = 'Sí, con mucho gusto podré acompañarlos a la Ceremonia Religiosa el 24 de enero de 2026 a las 16:00 hrs';
-    } else if (eventoSeleccionado === 'recepcion') {
-        mensaje = 'Sí, con mucho gusto podré acompañarlos a la Recepción el 24 de enero de 2026 a las 18:00 hrs';
-    }
-    
-    window.open('https://wa.me/50247700182?text=' + encodeURIComponent(mensaje), '_blank');
+    var numeroNovia = '50232857369';
+    var mensaje = encodeURIComponent('Hola Masella, confirmo mi asistencia a tu boda el 24 de enero de 2026.');
+    window.open('https://wa.me/' + numeroNovia + '?text=' + mensaje, '_blank');
     cerrarModal();
 }
 
 function confirmarNovio() {
-    var mensaje = '';
-    
-    if (eventoSeleccionado === 'ceremonia') {
-        mensaje = 'Sí, con mucho gusto podré acompañarlos a la Ceremonia Religiosa el 24 de enero de 2026 a las 16:00 hrs';
-    } else if (eventoSeleccionado === 'recepcion') {
-        mensaje = 'Sí, con mucho gusto podré acompañarlos a la Recepción el 24 de enero de 2026 a las 18:00 hrs';
-    }
-    
-    window.open('https://wa.me/50242154639?text=' + encodeURIComponent(mensaje), '_blank');
+    var numeroNovio = '50240834800';
+    var mensaje = encodeURIComponent('Hola Guzmán, confirmo mi asistencia a tu boda el 24 de enero de 2026.');
+    window.open('https://wa.me/' + numeroNovio + '?text=' + mensaje, '_blank');
     cerrarModal();
 }
 
-// === MENÚ HAMBURGUESA ===
-function toggleMenu() {
-    var menu = document.getElementById('mainMenu');
-    menu.classList.toggle('active');
-    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
-}
+// === REPRODUCTOR DE MÚSICA ===
+var audio = document.getElementById('musica-fondo');
+var btnPlay = document.getElementById('btnPlay');
+var iconoPlay = document.getElementById('iconoPlay');
+var barraProgreso = document.getElementById('barraProgreso');
+var puntoProgreso = document.getElementById('puntoProgreso');
+var barraContainer = document.querySelector('.barra-progreso-container');
+var estaSonando = false;
 
-function closeMenu() {
-    var menu = document.getElementById('mainMenu');
-    menu.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
+// Play/Pause
+btnPlay.addEventListener('click', function() {
+    if (estaSonando) {
+        audio.pause();
+        iconoPlay.className = 'fa fa-play';
+        estaSonando = false;
+    } else {
+        audio.play();
+        iconoPlay.className = 'fa fa-pause';
+        estaSonando = true;
+    }
+});
+
+// Actualizar barra de progreso
+audio.addEventListener('timeupdate', function() {
+    var progreso = (audio.currentTime / audio.duration) * 100;
+    barraProgreso.style.width = progreso + '%';
+    puntoProgreso.style.left = progreso + '%';
+});
+
+// Click en barra de progreso
+barraContainer.addEventListener('click', function(e) {
+    var rect = barraContainer.getBoundingClientRect();
+    var clickX = e.clientX - rect.left;
+    var porcentaje = clickX / rect.width;
+    audio.currentTime = porcentaje * audio.duration;
+});
+
+// Botón Anterior (reiniciar)
+document.getElementById('btnAnterior').addEventListener('click', function() {
+    audio.currentTime = 0;
+});
+
+// Botón Siguiente (reiniciar)
+document.getElementById('btnSiguiente').addEventListener('click', function() {
+    audio.currentTime = 0;
+});
+
+// Shuffle y Repeat (efectos visuales)
+document.getElementById('btnShuffle').addEventListener('click', function() {
+    this.style.color = this.style.color === 'rgb(44, 95, 141)' ? '#999' : '#2C5F8D';
+});
+
+document.getElementById('btnRepeat').addEventListener('click', function() {
+    audio.loop = !audio.loop;
+    this.style.color = audio.loop ? '#2C5F8D' : '#999';
+});
+
+// === INICIALIZAR AL CARGAR ===
+$(document).ready(function() {
+    iniciarFlipClock();
+    iniciarContador();
+
+    // Cerrar modal al hacer click fuera
+    window.onclick = function(event) {
+        var modal = document.getElementById('modalAsistencia');
+        if (event.target == modal) {
+            cerrarModal();
+        }
+    };
+});

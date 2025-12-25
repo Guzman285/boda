@@ -82,6 +82,52 @@
             </div>
         </header>
 
+        <!-- REPRODUCTOR DE MÚSICA - NUEVO DISEÑO -->
+        <div class="seccion-reproductor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="reproductor-elegante">
+                            <p class="titulo-reproductor">Dale play a nuestra canción</p>
+                            
+                            <!-- BARRA DE PROGRESO -->
+                            <div class="barra-progreso-container">
+                                <div class="barra-progreso" id="barraProgreso"></div>
+                                <div class="punto-progreso" id="puntoProgreso"></div>
+                            </div>
+                            
+                            <!-- CONTROLES -->
+                            <div class="controles-musica">
+                                <button class="control-btn" id="btnShuffle" title="Aleatorio">
+                                    <i class="fa fa-shuffle"></i>
+                                </button>
+                                <button class="control-btn" id="btnAnterior" title="Anterior">
+                                    <i class="fa fa-backward-step"></i>
+                                </button>
+                                <button class="control-btn control-btn-play" id="btnPlay" title="Play/Pause">
+                                    <i class="fa fa-play" id="iconoPlay"></i>
+                                </button>
+                                <button class="control-btn" id="btnSiguiente" title="Siguiente">
+                                    <i class="fa fa-forward-step"></i>
+                                </button>
+                                <button class="control-btn" id="btnRepeat" title="Repetir">
+                                    <i class="fa fa-repeat"></i>
+                                </button>
+                            </div>
+
+                            <!-- NOMBRE DE LA CANCIÓN -->
+                            <p class="nombre-cancion">Qué Suerte Tenerte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUDIO OCULTO -->
+        <audio id="musica-fondo" loop>
+            <source src="music/que-suerte-tenerte.mp3" type="audio/mpeg">
+        </audio>
+
         <!-- MENSAJE DE BIENVENIDA -->
         <div id="fh5co-couple" class="seccion">
             <div class="container">
@@ -178,7 +224,7 @@
                                 <br><br>
 
                                 <a href="#" onclick="abrirModal('ceremonia'); return false;" class="boton boton-principal">
-                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
+                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
                                 </a>
                             </div>
                         </div>
@@ -232,7 +278,7 @@
                                 <br><br>
 
                                 <a href="#" onclick="abrirModal('recepcion'); return false;" class="boton boton-principal">
-                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
+                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
                                 </a>
                             </div>
                         </div>
@@ -346,6 +392,7 @@
                                 <div class="especificacion-hombre">
                                     <h4>HOMBRES</h4>
                                     <p class="detalle-principal">Traje Formal</p>
+                                    <p class="detalle-nota">(No azul claro)</p>
                                     <p class="detalle-info">Zapato formal</p>
                                     <p class="detalle-info">Corbata</p>
                                 </div>
@@ -437,24 +484,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <i class="fa fa-heart icono-corazon"></i>
                         <h2 class="mensaje-final">¡Te esperamos con mucho amor!</h2>
                         <p class="firma">Guzmán & Masella</p>
                         <p class="fecha-final">24 • 01 • 2026</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- REPRODUCTOR DE MÚSICA -->
-        <audio id="musica-fondo" loop>
-            <source src="music/que-suerte-tenerte.mp3" type="audio/mpeg">
-        </audio>
-
-        <div class="reproductor-musica">
-            <button class="boton-reproductor" onclick="alternarMusica()">
-                <i id="icono-musica" class="fa fa-play"></i>
-            </button>
-            <span>Qué Suerte Tenerte</span>
         </div>
 
         <!-- MODAL -->
