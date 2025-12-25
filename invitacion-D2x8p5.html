@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Boda</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&display=swap');
+        
         @page {
             margin: 10mm;
             size: A4;
@@ -20,155 +21,225 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #f5f3e0 0%, #e8e3d3 100%);
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #f8f6f1 0%, #e8e3d8 50%, #f5f2ea 100%);
             margin: 0;
             padding: 0;
-            -webkit-print-color-adjust: exact;
-        }
-
-        .contenedor-principal {
-            width: 100%;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .flor-esquina {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            opacity: 0.75;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .flor-superior-izq {
+            top: -20px;
+            left: -20px;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Cg opacity="0.6"%3E%3Cellipse cx="60" cy="40" rx="25" ry="35" fill="%2398b5c9" transform="rotate(-30 60 40)"/%3E%3Cellipse cx="85" cy="55" rx="25" ry="35" fill="%23a8c5d9" transform="rotate(10 85 55)"/%3E%3Cellipse cx="70" cy="80" rx="25" ry="35" fill="%2398b5c9" transform="rotate(50 70 80)"/%3E%3Cellipse cx="40" cy="70" rx="25" ry="35" fill="%23b8d5e9" transform="rotate(-70 40 70)"/%3E%3Ccircle cx="65" cy="60" r="8" fill="%232c3e50"/%3E%3Cpath d="M65,60 Q50,90 45,120 Q40,140 35,160" stroke="%2387a896" stroke-width="3" fill="none"/%3E%3Cellipse cx="25" cy="155" rx="15" ry="25" fill="%2387a896" transform="rotate(-20 25 155)"/%3E%3Cellipse cx="45" cy="165" rx="12" ry="20" fill="%2397b8a6" transform="rotate(30 45 165)"/%3E%3C/g%3E%3C/svg%3E') no-repeat;
+            background-size: contain;
+        }
+
+        .flor-inferior-der {
+            bottom: -20px;
+            right: -20px;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Cg opacity="0.6"%3E%3Cellipse cx="140" cy="160" rx="25" ry="35" fill="%2398b5c9" transform="rotate(30 140 160)"/%3E%3Cellipse cx="115" cy="145" rx="25" ry="35" fill="%23a8c5d9" transform="rotate(-10 115 145)"/%3E%3Cellipse cx="130" cy="120" rx="25" ry="35" fill="%2398b5c9" transform="rotate(-50 130 120)"/%3E%3Cellipse cx="160" cy="130" rx="25" ry="35" fill="%23b8d5e9" transform="rotate(70 160 130)"/%3E%3Ccircle cx="135" cy="140" r="8" fill="%232c3e50"/%3E%3Cpath d="M135,140 Q150,110 155,80 Q160,60 165,40" stroke="%2387a896" stroke-width="3" fill="none"/%3E%3Cellipse cx="175" cy="45" rx="15" ry="25" fill="%2387a896" transform="rotate(20 175 45)"/%3E%3Cellipse cx="155" cy="35" rx="12" ry="20" fill="%2397b8a6" transform="rotate(-30 155 35)"/%3E%3C/g%3E%3C/svg%3E') no-repeat;
+            background-size: contain;
+        }
+
+        .contenedor-principal {
+            width: 100%;
+            max-width: 650px;
             padding: 20px;
+            position: relative;
         }
 
         #pdf-content {
             background: white;
-            padding: 35px 40px;
-            border-radius: 20px;
+            padding: 50px 40px;
+            border-radius: 0;
             text-align: center;
-            max-width: 700px;
             width: 100%;
-            border: 6px solid #d4a574;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 80px rgba(44, 62, 80, 0.15);
+            position: relative;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        #pdf-content::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 2px solid #d4a574;
+            pointer-events: none;
         }
 
         .titulo-boda {
-            font-size: 28px;
+            font-size: 22px;
             color: #2c3e50;
-            letter-spacing: 5px;
-            margin-bottom: 20px;
+            letter-spacing: 8px;
+            margin-bottom: 25px;
             font-weight: 300;
             text-transform: uppercase;
         }
 
         .nombres {
-            font-family: 'Brush Script MT', 'Bradley Hand', cursive;
-            font-size: 64px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
             color: #2C5F8D;
-            margin: 25px 0;
-            font-weight: normal;
-            font-style: italic;
-            line-height: 1.1;
+            margin: 30px 0;
+            font-weight: 400;
+            line-height: 1.2;
         }
 
         .decorativo {
-            font-size: 30px;
+            font-size: 28px;
             color: #d4a574;
-            margin: 20px 0;
+            margin: 25px 0;
+            letter-spacing: 15px;
         }
 
         .fecha {
-            font-size: 24px;
+            font-size: 22px;
             color: #555;
-            letter-spacing: 8px;
-            margin: 20px 0;
-            font-weight: normal;
+            letter-spacing: 6px;
+            margin: 25px 0;
+            font-weight: 400;
         }
 
         .sobre-container {
-            margin: 25px 0 20px 0;
+            margin: 35px 0 15px 0;
             position: relative;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 15px;
         }
 
         .sobre-link {
             text-decoration: none;
             display: inline-block;
-            transition: transform 0.3s;
+            transition: all 0.4s ease;
+            position: relative;
+            animation: pulso 2s ease-in-out infinite;
+        }
+
+        @keyframes pulso {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .sobre-link:hover {
-            transform: scale(1.05);
+            transform: scale(1.08) !important;
+            filter: brightness(1.1);
+        }
+
+        .sobre-link::after {
+            content: '☝';
+            position: absolute;
+            top: -35px;
+            right: -25px;
+            font-size: 40px;
+            animation: apuntar 1.5s ease-in-out infinite;
+        }
+
+        @keyframes apuntar {
+            0%, 100% { transform: translateY(0) rotate(-25deg); }
+            50% { transform: translateY(-8px) rotate(-25deg); }
         }
 
         .sobre-imagen {
-            width: 220px;
+            width: 240px;
             height: auto;
-            border-radius: 15px;
-            border: 4px solid #d4a574;
-            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(44, 95, 141, 0.25);
+            border: 3px solid #d4a574;
+        }
+
+        .click-texto {
+            font-size: 15px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-top: 10px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(44, 95, 141, 0.1));
+            border-radius: 8px;
+            border: 2px dashed #d4a574;
         }
 
         .linea {
-            width: 120px;
+            width: 100px;
             height: 2px;
-            background: #d4a574;
-            margin: 20px auto;
+            background: linear-gradient(to right, transparent, #d4a574, transparent);
+            margin: 25px auto;
         }
 
         .mensaje {
-            margin: 20px 0;
-            padding: 20px;
-            background: rgba(212, 165, 116, 0.15);
-            border-radius: 15px;
-            border-left: 5px solid #d4a574;
+            margin: 25px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(44, 95, 141, 0.05));
+            border-radius: 10px;
+            border-left: 4px solid #d4a574;
         }
 
         .mensaje p {
-            font-size: 15px;
+            font-size: 16px;
             color: #555;
-            line-height: 1.8;
-            font-family: 'Georgia', serif;
+            line-height: 1.9;
             margin: 0;
         }
 
         .lugares {
-            margin: 25px 0 20px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(44, 95, 141, 0.12) 0%, rgba(212, 165, 116, 0.12) 100%);
-            border-radius: 15px;
-            border: 3px solid #d4a574;
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(44, 95, 141, 0.08) 0%, rgba(212, 165, 116, 0.08) 100%);
+            border-radius: 10px;
+            border: 2px solid #d4a574;
         }
 
         .lugares-titulo {
             font-size: 14px;
             color: #2c3e50;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
         .numero-lugares {
-            font-family: 'Georgia', serif;
-            font-size: 60px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 85px;
             color: #2C5F8D;
-            font-weight: bold;
-            margin: 12px 0;
-            text-shadow: 2px 2px 4px rgba(44, 95, 141, 0.2);
+            font-weight: 400;
+            margin: 10px 0;
+            text-shadow: 2px 2px 8px rgba(44, 95, 141, 0.2);
         }
 
         .lugares-texto {
-            font-size: 14px;
+            font-size: 15px;
             color: #555;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .footer {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 3px solid #d4a574;
-            font-size: 14px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #d4a574;
+            font-size: 16px;
             color: #888;
-            font-family: 'Arial', sans-serif;
+            font-style: italic;
         }
 
         @media print {
@@ -178,14 +249,37 @@
 
             .contenedor-principal {
                 padding: 0;
-                min-height: auto;
             }
 
             #pdf-content {
                 box-shadow: none;
-                border: 4px solid #d4a574;
                 page-break-inside: avoid;
-                padding: 30px 35px;
+            }
+
+            .sobre-link::after {
+                display: none;
+            }
+
+            @keyframes pulso { 0%, 100% { transform: none; } }
+            @keyframes apuntar { 0%, 100% { transform: none; } }
+        }
+
+        @media (max-width: 600px) {
+            #pdf-content {
+                padding: 35px 25px;
+            }
+
+            .nombres {
+                font-size: 56px;
+            }
+
+            .titulo-boda {
+                font-size: 18px;
+                letter-spacing: 5px;
+            }
+
+            .sobre-imagen {
+                width: 200px;
             }
         }
     </style>
@@ -193,43 +287,36 @@
 <body>
     <div class="contenedor-principal">
         <div id="pdf-content">
-            <!-- Título -->
-            <div class="titulo-boda">♦ NUESTRA BODA ♦</div>
+            <div class="flor-esquina flor-superior-izq"></div>
+            <div class="flor-esquina flor-inferior-der"></div>
 
-            <!-- Nombres -->
+            <div class="titulo-boda">NUESTRA BODA</div>
             <div class="nombres">Guzmán & Masella</div>
-
             <div class="decorativo">✿ ✿ ✿</div>
-
-            <!-- Fecha -->
             <div class="fecha">24 · ENERO · 2026</div>
 
             <div class="linea"></div>
 
-            <!-- Sobre con imagen clickeable -->
             <div class="sobre-container">
                 <a href="https://guzman285.github.io/boda/" target="_blank" class="sobre-link" title="Haz clic para ver la invitación completa">
                     <img src="https://raw.githubusercontent.com/Guzman285/boda/main/images/generated.png" alt="Sobre invitación" class="sobre-imagen">
                 </a>
+                <div class="click-texto">☝️ Click para abrir la invitación</div>
             </div>
 
             <div class="linea"></div>
 
-            <!-- Mensaje personalizado -->
             <div class="mensaje">
                 <p>Es un honor compartir con ustedes este momento tan importante. Por cuestiones de espacio, la invitación es solo para dos personas. Gracias por comprender.</p>
             </div>
 
-            <!-- Lugares Reservados -->
             <div class="lugares">
                 <div class="lugares-titulo">Hemos Reservado</div>
                 <div class="numero-lugares">2</div>
                 <div class="lugares-texto">Lugares en su honor</div>
             </div>
 
-            <div class="footer">
-                ¡Los esperamos con mucho cariño!
-            </div>
+            <div class="footer">¡Los esperamos con mucho cariño!</div>
         </div>
     </div>
 </body>
