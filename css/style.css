@@ -1083,7 +1083,6 @@ body {
 }
 
 .icono-confirmacion {
-    background: #D4E5F3;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -1093,9 +1092,9 @@ body {
     margin: 0 auto 30px;
 }
 
-.icono-confirmacion i {
-    font-size: 36px;
-    color: #2C5F8D;
+.icono-whatsapp {
+    width: 80px;
+    height: 80px;
 }
 
 .titulo-confirmacion {
@@ -1132,9 +1131,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-block;
     transition: all 0.3s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -1144,11 +1141,6 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     color: white;
-}
-
-.boton-whatsapp img {
-    width: 28px;
-    height: 28px;
 }
 
 /* SECCIÓN SIN NIÑOS */
@@ -1601,7 +1593,6 @@ body {
     .boton-whatsapp {
         width: 100%;
         max-width: 300px;
-        justify-content: center;
     }
 
     .tarjeta-vestimenta-unificada {
