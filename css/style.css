@@ -979,7 +979,7 @@ body {
     width: 100%;
     max-width: 800px;
     overflow: visible;
-    min-height: 750px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
 }
@@ -1060,12 +1060,6 @@ body {
     color: white;
 }
 
-/* ÍCONO DE WHATSAPP MÁS GRANDE */
-.boton-principal img {
-    width: 50px !important;
-    height: 50px !important;
-}
-
 .boton-contorno {
     background: white;
     color: #2C5F8D;
@@ -1075,6 +1069,110 @@ body {
 .boton-contorno:hover {
     background: #2C5F8D;
     color: white;
+}
+
+/* === CONFIRMACIÓN DE ASISTENCIA - NUEVO DISEÑO === */
+.tarjeta-confirmacion {
+    background: white;
+    border-radius: 15px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.icono-confirmacion {
+    background: #D4E5F3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.icono-confirmacion i {
+    font-size: 36px;
+    color: #2C5F8D;
+}
+
+.titulo-confirmacion {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.texto-confirmacion {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.botones-confirmacion {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.boton-whatsapp {
+    background: #B8CBD9;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.boton-whatsapp:hover {
+    background: #A0B8CA;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    color: white;
+}
+
+.boton-whatsapp img {
+    width: 28px;
+    height: 28px;
+}
+
+/* SECCIÓN SIN NIÑOS */
+.seccion-sin-ninos {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.titulo-sin-ninos {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.texto-sin-ninos {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* === MENSAJE DE TRANSICIÓN === */
@@ -1382,44 +1480,6 @@ body {
     border-radius: 10px;
 }
 
-/* === NOTA SOLO ADULTOS === */
-.tarjeta-adultos-solo {
-    background: white;
-    border-radius: 15px;
-    padding: 50px 40px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border-left: 5px solid #2C5F8D;
-}
-
-.tarjeta-adultos-solo i {
-    font-size: 3rem;
-    color: #FF69B4;
-    margin-bottom: 20px;
-}
-
-.tarjeta-adultos-solo h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: #2C5F8D;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.tarjeta-adultos-solo p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.tarjeta-adultos-solo .nota-final {
-    font-style: italic;
-    color: #888;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
 /* === DESPEDIDA === */
 .icono-corazon {
     font-size: 4rem;
@@ -1448,116 +1508,6 @@ body {
     letter-spacing: 5px;
     font-weight: 300;
     color: #666;
-}
-
-/* === MODAL === */
-.superposicion-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 10000;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenido-modal {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.cerrar-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    color: #999;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.cerrar-modal:hover {
-    color: #333;
-}
-
-.titulo-modal {
-    font-family: 'Sacramento', cursive;
-    color: #2C5F8D;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.subtitulo-modal {
-    color: #2C5F8D;
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.fecha-limite {
-    color: #2C5F8D;
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.nota-adultos {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-.pregunta-modal {
-    color: #2C5F8D;
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.botones-modal {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.boton-modal {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: white;
-}
-
-.boton-modal:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.boton-modal-novia {
-    background: linear-gradient(135deg, #4A90C8 0%, #2C5F8D 100%);
-}
-
-.boton-modal-novio {
-    background: linear-gradient(135deg, #3B7BB5 0%, #1E4A6D 100%);
-}
-
-.boton-modal i {
-    margin-right: 8px;
 }
 
 /* === RESPONSIVE SECCIONES === */
@@ -1635,16 +1585,23 @@ body {
         height: 250px;
     }
 
-    .tarjeta-adultos-solo {
+    .tarjeta-confirmacion {
         padding: 40px 30px;
     }
 
-    .tarjeta-adultos-solo h3 {
+    .titulo-confirmacion {
         font-size: 24px;
     }
 
-    .tarjeta-adultos-solo p {
-        font-size: 16px;
+    .botones-confirmacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-whatsapp {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 
     .tarjeta-vestimenta-unificada {
@@ -1671,12 +1628,6 @@ body {
 
     .divisor-vestimenta {
         display: none;
-    }
-
-    /* ÍCONO WHATSAPP MÁS GRANDE EN MÓVIL */
-    .boton-principal img {
-        width: 45px !important;
-        height: 45px !important;
     }
 }
 
@@ -1712,16 +1663,21 @@ body {
         height: 300px;
     }
 
-    .tarjeta-adultos-solo {
+    .tarjeta-confirmacion {
         padding: 30px 20px;
     }
 
-    .tarjeta-adultos-solo h3 {
+    .titulo-confirmacion {
         font-size: 22px;
     }
 
-    .tarjeta-adultos-solo p {
-        font-size: 15px;
+    .texto-confirmacion {
+        font-size: 16px;
+    }
+
+    .boton-whatsapp {
+        font-size: 14px;
+        padding: 12px 25px;
     }
 
     .tarjeta-vestimenta-unificada {
@@ -1761,12 +1717,6 @@ body {
 
     .detalle-info {
         font-size: 14px;
-    }
-
-    /* ÍCONO WHATSAPP AJUSTADO EN MÓVILES PEQUEÑOS */
-    .boton-principal img {
-        width: 40px !important;
-        height: 40px !important;
     }
 }
 

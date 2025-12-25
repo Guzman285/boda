@@ -220,12 +220,6 @@
                                 <a href="https://www.google.com/maps/dir/?api=1&destination=14.6378125,-90.5069204" target="_blank" class="boton boton-contorno">
                                     <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
                                 </a>
-
-                                <br><br>
-
-                                <a href="#" onclick="abrirModal('ceremonia'); return false;" class="boton boton-principal">
-                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -274,12 +268,6 @@
                                 <a href="https://www.google.com/maps/dir/?api=1&destination=14.64308,-90.5077864" target="_blank" class="boton boton-contorno">
                                     <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
                                 </a>
-
-                                <br><br>
-
-                                <a href="#" onclick="abrirModal('recepcion'); return false;" class="boton boton-principal">
-                                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 12px;"> Confirmar Asistencia
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -292,6 +280,44 @@
                             <i class="fa fa-parking"></i>
                             <p><strong>Parqueo:</strong> Ubicado atrás de las instalaciones de la Policía Nacional Civil.</p>
                             <p class="nota-efectivo"><i class="fa fa-money-bill-wave"></i> Por favor, llevar efectivo para el pago del parqueo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIRMACIÓN DE ASISTENCIA - NUEVO DISEÑO -->
+        <div id="fh5co-rsvp" class="seccion">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="tarjeta-confirmacion">
+                            <!-- ÍCONO SUPERIOR -->
+                            <div class="icono-confirmacion">
+                                <i class="fa fa-phone"></i>
+                            </div>
+
+                            <!-- TÍTULO -->
+                            <h2 class="titulo-confirmacion">CONFIRMAR ASISTENCIA</h2>
+                            
+                            <!-- TEXTO -->
+                            <p class="texto-confirmacion">Agradecemos que confirmes tu asistencia antes del 20 de Agosto</p>
+
+                            <!-- BOTONES WHATSAPP -->
+                            <div class="botones-confirmacion">
+                                <a href="https://wa.me/50232857369?text=Hola%20Masella%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026." target="_blank" class="boton-whatsapp">
+                                    <img src="images/whatsapp.png" alt="WhatsApp"> Contacto novia
+                                </a>
+                                <a href="https://wa.me/50240834800?text=Hola%20Guzmán%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026." target="_blank" class="boton-whatsapp">
+                                    <img src="images/whatsapp.png" alt="WhatsApp"> Contacto novio
+                                </a>
+                            </div>
+
+                            <!-- SECCIÓN SIN NIÑOS -->
+                            <div class="seccion-sin-ninos">
+                                <h3 class="titulo-sin-ninos">SIN NIÑOS</h3>
+                                <p class="texto-sin-ninos">Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión! Dejemos a los niños en casa esta vez.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -463,22 +489,6 @@
             </div>
         </div>
 
-        <!-- NOTA IMPORTANTE: SOLO ADULTOS -->
-        <div id="fh5co-adults-only" class="seccion seccion-gris">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="tarjeta-adultos-solo">
-                            <i class="fa fa-heart"></i>
-                            <h3>Celebración Solo para Adultos</h3>
-                            <p>Para que puedan disfrutar plenamente de nuestra boda, hemos decidido que sea un evento exclusivo para adultos. Agradecemos de corazón su comprensión.</p>
-                            <p class="nota-final">Los niños son una bendición, pero esta noche está dedicada a ustedes para que puedan relajarse y celebrar sin preocupaciones.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- DESPEDIDA -->
         <div id="fh5co-footer" class="seccion text-center">
             <div class="container">
@@ -489,26 +499,6 @@
                         <p class="firma">Guzmán & Masella</p>
                         <p class="fecha-final">24 • 01 • 2026</p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- MODAL -->
-        <div id="modalAsistencia" class="superposicion-modal">
-            <div class="contenido-modal">
-                <button class="cerrar-modal" onclick="cerrarModal()">&times;</button>
-                <h3 class="titulo-modal">Confirmar Asistencia</h3>
-                <p id="subtituloEvento" class="subtitulo-modal"></p>
-                <p class="fecha-limite">Por favor confirma antes del 5 de enero de 2026</p>
-                <p class="nota-adultos">Para disfrutar plenamente de nuestra celebración, hemos decidido que sea un evento solo para adultos. Agradecemos tu comprensión.</p>
-                <p class="pregunta-modal">¿Eres invitado de...?</p>
-                <div class="botones-modal">
-                    <button class="boton-modal boton-modal-novia" onclick="confirmarNovia()">
-                        <i class="fa fa-heart"></i> La Novia (Masella)
-                    </button>
-                    <button class="boton-modal boton-modal-novio" onclick="confirmarNovio()">
-                        <i class="fa fa-heart"></i> El Novio (Guzmán)
-                    </button>
                 </div>
             </div>
         </div>

@@ -47,38 +47,6 @@ function closeMenu() {
     document.getElementById('mainMenu').classList.remove('active');
 }
 
-// === MODAL DE CONFIRMACIÓN ===
-function abrirModal(evento) {
-    var modal = document.getElementById('modalAsistencia');
-    var subtitulo = document.getElementById('subtituloEvento');
-
-    if (evento === 'ceremonia') {
-        subtitulo.textContent = 'Ceremonia Religiosa - 4:00 PM';
-    } else if (evento === 'recepcion') {
-        subtitulo.textContent = 'Cóctel y Recepción - 5:00 PM';
-    }
-
-    modal.style.display = 'flex';
-}
-
-function cerrarModal() {
-    document.getElementById('modalAsistencia').style.display = 'none';
-}
-
-function confirmarNovia() {
-    var numeroNovia = '50232857369';
-    var mensaje = encodeURIComponent('Hola Masella, confirmo mi asistencia a tu boda el 24 de enero de 2026.');
-    window.open('https://wa.me/' + numeroNovia + '?text=' + mensaje, '_blank');
-    cerrarModal();
-}
-
-function confirmarNovio() {
-    var numeroNovio = '50240834800';
-    var mensaje = encodeURIComponent('Hola Guzmán, confirmo mi asistencia a tu boda el 24 de enero de 2026.');
-    window.open('https://wa.me/' + numeroNovio + '?text=' + mensaje, '_blank');
-    cerrarModal();
-}
-
 // === REPRODUCTOR DE MÚSICA ===
 var audio = document.getElementById('musica-fondo');
 var btnPlay = document.getElementById('btnPlay');
@@ -140,12 +108,4 @@ document.getElementById('btnRepeat').addEventListener('click', function() {
 $(document).ready(function() {
     iniciarFlipClock();
     iniciarContador();
-
-    // Cerrar modal al hacer click fuera
-    window.onclick = function(event) {
-        var modal = document.getElementById('modalAsistencia');
-        if (event.target == modal) {
-            cerrarModal();
-        }
-    };
 });
