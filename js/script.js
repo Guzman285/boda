@@ -3,7 +3,7 @@
 // JavaScript para interactividad
 // ============================================
 
-// === CONTADOR REGRESIVO ===
+// === CONTADOR REGRESIVO ELEGANTE ===
 function iniciarContador() {
     var fechaBoda = new Date('2026-01-24 16:00:00').getTime();
 
@@ -16,26 +16,20 @@ function iniciarContador() {
         var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
         var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
+        // Actualizar elementos
+        document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+        document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+        document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+        document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+
         if (distancia < 0) {
             clearInterval(intervalo);
+            document.getElementById('dias').textContent = '00';
+            document.getElementById('horas').textContent = '00';
+            document.getElementById('minutos').textContent = '00';
+            document.getElementById('segundos').textContent = '00';
         }
     }, 1000);
-}
-
-// === FLIPCLOCK ===
-function iniciarFlipClock() {
-    var fechaBoda = new Date('2026-01-24 16:00:00').getTime();
-    var ahora = new Date().getTime();
-    var diferencia = Math.floor((fechaBoda - ahora) / 1000);
-
-    if (diferencia > 0) {
-        var clock = $('.clock').FlipClock(diferencia, {
-            clockFace: 'DailyCounter',
-            countdown: true,
-            language: 'es',
-            labels: ['Días', 'Horas', 'Minutos', 'Segundos']
-        });
-    }
 }
 
 // === MENÚ RESPONSIVE ===
@@ -106,6 +100,5 @@ document.getElementById('btnRepeat').addEventListener('click', function() {
 
 // === INICIALIZAR AL CARGAR ===
 $(document).ready(function() {
-    iniciarFlipClock();
     iniciarContador();
 });
