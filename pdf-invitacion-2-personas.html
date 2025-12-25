@@ -85,60 +85,28 @@
             align-items: center;
         }
 
-        .sobre {
+        .sobre-link {
             width: 300px;
             height: 200px;
-            background: linear-gradient(135deg, #B8CBD9 0%, #A0B8CA 100%);
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .sello {
-            position: absolute;
-            top: -20px;
-            right: 30px;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle at 30% 30%, #FFE066, #FFD700);
-            border: 3px solid rgba(255, 215, 0, 0.6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-            transform: rotate(-20deg);
-        }
-
-        .linea-puntada {
-            position: absolute;
-            width: 80%;
-            height: 2px;
-            border-top: 2px dashed rgba(255, 215, 0, 0.8);
-            top: 50%;
-            left: 10%;
-        }
-
-        .texto-sobre {
-            font-size: 18px;
-            color: #2C5F8D;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
             cursor: pointer;
+            transition: transform 0.3s;
             text-decoration: none;
-            transition: all 0.3s;
-            z-index: 10;
         }
 
-        .texto-sobre:hover {
-            color: #FFD700;
+        .sobre-link:hover {
             transform: scale(1.05);
+        }
+
+        .sobre-imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .click-abrir {
@@ -147,6 +115,22 @@
             margin-top: 20px;
             font-style: italic;
             font-family: 'Arial', sans-serif;
+        }
+
+        .mensaje {
+            margin: 40px 0;
+            padding: 25px;
+            background: rgba(44, 95, 141, 0.08);
+            border-radius: 10px;
+            border-left: 4px solid #2C5F8D;
+        }
+
+        .mensaje p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.8;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
         }
 
         .lugares {
@@ -178,21 +162,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        .informacion {
-            background: #FFF9E6;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-            border-left: 4px solid #FFD700;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .informacion p {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.6;
-        }
     </style>
 </head>
 <body>
@@ -204,32 +173,30 @@
             <div class="titulo-boda">NUESTRA BODA</div>
 
             <!-- Nombres -->
-            <div class="nombres">Mariana & Daniel</div>
+            <div class="nombres">Guzmán & Masella</div>
 
             <!-- Fecha -->
-            <div class="fecha">29-AGOSTO-2025</div>
+            <div class="fecha">24-ENERO-2026</div>
 
-            <!-- Sobre con sello -->
+            <!-- Sobre con imagen -->
             <div class="sobre-container">
-                <div class="sobre">
-                    <div class="linea-puntada"></div>
-                    <a href="https://guzman285.github.io/boda/" class="texto-sobre">ABRIR INVITACIÓN</a>
-                    <div class="sello">💌</div>
-                </div>
+                <a href="https://guzman285.github.io/boda/" class="sobre-link">
+                    <img src="https://raw.githubusercontent.com/Guzman285/boda/main/images/generated.png" alt="Sobre invitación" class="sobre-imagen">
+                </a>
             </div>
 
             <div class="click-abrir">Click para abrir la invitación digital</div>
+
+            <!-- Mensaje personalizado -->
+            <div class="mensaje">
+                <p>Es un honor compartir con ustedes este momento tan importante. Por cuestiones de espacio, la invitación es solo para dos personas. Gracias por comprender.</p>
+            </div>
 
             <!-- Lugares Reservados -->
             <div class="lugares">
                 <div class="lugares-titulo">Hemos Reservado</div>
                 <div class="numero-lugares">2</div>
                 <div class="lugares-texto">Lugares en su honor</div>
-            </div>
-
-            <!-- Información -->
-            <div class="informacion">
-                <p><strong>Nota:</strong> Este PDF contiene un enlace interactivo. Al hacer clic en "ABRIR INVITACIÓN", será redirigido a la invitación digital completa.</p>
             </div>
         </div>
     </div>
