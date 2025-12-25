@@ -1,520 +1,672 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Guzmán & Masella ❤️ 24.01.26</title>
-    <meta name="description" content="Nos casamos y queremos que seas parte de este día especial.">
+    <meta
+      name="description"
+      content="Nos casamos y queremos que seas parte de este día especial."
+    />
 
     <!-- Fuentes -->
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css'>
-    
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sacramento"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css"
+    />
+
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- LOADER -->
     <div class="fh5co-loader"></div>
 
     <div id="page">
-        <!-- NAVEGACIÓN -->
-        <nav class="fh5co-nav" role="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <div class="menu-icon" onclick="toggleMenu()">
-                            <i class="fa fa-bars"></i>
-                        </div>
-                    </div>
-                    <div class="col-xs-10 text-right menu-1" id="mainMenu">
-                        <span class="menu-close" onclick="toggleMenu()">&times;</span>
-                        <ul>
-                            <li><a href="#page" onclick="closeMenu()">Inicio</a></li>
-                            <li><a href="#fh5co-couple" onclick="closeMenu()">Padres</a></li>
-                            <li><a href="#fh5co-event" onclick="closeMenu()">Eventos</a></li>
-                            <li><a href="#fh5co-itinerary" onclick="closeMenu()">Itinerario</a></li>
-                            <li><a href="#fh5co-gallery" onclick="closeMenu()">Galería</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- NAVEGACIÓN -->
+      <nav class="fh5co-nav" role="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-2">
+              <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+              </div>
             </div>
-        </nav>
-
-        <!-- ENCABEZADO CON IMAGEN DE FONDO -->
-        <header id="fh5co-header" class="fh5co-cover" role="banner">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="display-t">
-                            <div class="display-tc">
-                                <!-- NOMBRES: GUZMÁN Y MASELLA -->
-                                <h1>Guzmán & Masella</h1>
-
-                                <!-- IMAGEN DECORATIVA (CAMBIADA A OIP.png) -->
-                                <img src="images/OIP.png" alt="Decoración" class="imagen-decorativa">
-
-                                <!-- FECHA CON ESTILO ELEGANTE -->
-                                <h2 class="fecha-elegante">24.01.26</h2>
-
-                                <div class="versiculo">
-                                    "Ahora, pues, permanecen estas tres virtudes: la fe, la esperanza y el amor. Pero la más excelente de ellas es el amor."
-                                    <span class="versiculo-referencia">1 Corintios 13:13</span>
-                                </div>
-
-                                <!-- CONTADOR FLIPCLOCK -->
-                                <div class="flipTimebox">
-                                    <div class="clock clock-fix"></div>
-                                </div>
-
-                                <p><a href="#fh5co-event" class="btn btn-default btn-sm">Reserva la fecha</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xs-10 text-right menu-1" id="mainMenu">
+              <span class="menu-close" onclick="toggleMenu()">&times;</span>
+              <ul>
+                <li><a href="#page" onclick="closeMenu()">Inicio</a></li>
+                <li>
+                  <a href="#fh5co-couple" onclick="closeMenu()">Padres</a>
+                </li>
+                <li>
+                  <a href="#fh5co-event" onclick="closeMenu()">Eventos</a>
+                </li>
+                <li>
+                  <a href="#fh5co-itinerary" onclick="closeMenu()"
+                    >Itinerario</a
+                  >
+                </li>
+                <li>
+                  <a href="#fh5co-gallery" onclick="closeMenu()">Galería</a>
+                </li>
+              </ul>
             </div>
-        </header>
-
-        <!-- REPRODUCTOR DE MÚSICA - NUEVO DISEÑO -->
-        <div class="seccion-reproductor">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="reproductor-elegante">
-                            <p class="titulo-reproductor">Dale play a nuestra canción</p>
-                            
-                            <!-- BARRA DE PROGRESO -->
-                            <div class="barra-progreso-container">
-                                <div class="barra-progreso" id="barraProgreso"></div>
-                                <div class="punto-progreso" id="puntoProgreso"></div>
-                            </div>
-                            
-                            <!-- CONTROLES -->
-                            <div class="controles-musica">
-                                <button class="control-btn" id="btnShuffle" title="Aleatorio">
-                                    <i class="fa fa-shuffle"></i>
-                                </button>
-                                <button class="control-btn" id="btnAnterior" title="Anterior">
-                                    <i class="fa fa-backward-step"></i>
-                                </button>
-                                <button class="control-btn control-btn-play" id="btnPlay" title="Play/Pause">
-                                    <i class="fa fa-play" id="iconoPlay"></i>
-                                </button>
-                                <button class="control-btn" id="btnSiguiente" title="Siguiente">
-                                    <i class="fa fa-forward-step"></i>
-                                </button>
-                                <button class="control-btn" id="btnRepeat" title="Repetir">
-                                    <i class="fa fa-repeat"></i>
-                                </button>
-                            </div>
-
-                            <!-- NOMBRE DE LA CANCIÓN -->
-                            <p class="nombre-cancion">Qué Suerte Tenerte</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </nav>
 
-        <!-- AUDIO OCULTO -->
-        <audio id="musica-fondo" loop>
-            <source src="music/que-suerte-tenerte.mp3" type="audio/mpeg">
-        </audio>
+      <!-- ENCABEZADO CON IMAGEN DE FONDO -->
+      <header id="fh5co-header" class="fh5co-cover" role="banner">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <div class="display-t">
+                <div class="display-tc">
+                  <!-- NOMBRES: GUZMÁN Y MASELLA -->
+                  <h1>Guzmán & Masella</h1>
 
-        <!-- MENSAJE DE BIENVENIDA -->
-        <div id="fh5co-couple" class="seccion">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <p class="mensaje-bienvenida">
-                            Deseamos de todo corazón poder contar con la presencia de cada uno de ustedes para juntos celebrar este día tan especial...
-                        </p>
-                    </div>
+                  <!-- IMAGEN DECORATIVA (CAMBIADA A OIP.png) -->
+                  <img
+                    src="images/OIP.png"
+                    alt="Decoración"
+                    class="imagen-decorativa"
+                  />
+
+                  <!-- FECHA CON ESTILO ELEGANTE -->
+                  <h2 class="fecha-elegante">24.01.26</h2>
+
+                  <div class="versiculo">
+                    "Ahora, pues, permanecen estas tres virtudes: la fe, la
+                    esperanza y el amor. Pero la más excelente de ellas es el
+                    amor."
+                    <span class="versiculo-referencia">1 Corintios 13:13</span>
+                  </div>
+
+                  <!-- CONTADOR FLIPCLOCK -->
+                  <div class="flipTimebox">
+                    <div class="clock clock-fix"></div>
+                  </div>
+
+                  <p>
+                    <a href="#fh5co-event" class="btn btn-default btn-sm"
+                      >Reserva la fecha</a
+                    >
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </header>
 
-        <!-- BENDICIÓN DE PADRES Y PADRINOS -->
-        <div id="fh5co-couple" class="seccion seccion-gris">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Con la bendición de Dios y el amor de nuestros padres</h2>
-                        <!-- IMAGEN ARGOLLAS DESPUÉS DEL TÍTULO -->
-                        <img src="images/argollas.png" alt="Argollas" style="max-width: 120px; margin: 20px auto; display: block; opacity: 0.8;">
-                    </div>
+      <!-- REPRODUCTOR DE MÚSICA - NUEVO DISEÑO -->
+      <div class="seccion-reproductor">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="reproductor-elegante">
+                <p class="titulo-reproductor">Dale play a nuestra canción</p>
+
+                <!-- BARRA DE PROGRESO -->
+                <div class="barra-progreso-container">
+                  <div class="barra-progreso" id="barraProgreso"></div>
+                  <div class="punto-progreso" id="puntoProgreso"></div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 text-center">
-                        <div class="grupo-padres">
-                            <h3 class="subtitulo-familia">Padres de la Novia</h3>
-                            <p class="nombre-padre">Irlanda Amarilis Mollinedo Román de Masella</p>
-                            <p class="nombre-padre">Tulio Humberto Masella Archila</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 text-center">
-                        <div class="grupo-padres">
-                            <h3 class="subtitulo-familia">Padres del Novio</h3>
-                            <p class="nombre-padre">Geisy Elizabeth Amézquita Fuentes</p>
-                            <p class="nombre-padre">Fredy Antonio Guzmán de León</p>
-                        </div>
-                    </div>
+                <!-- CONTROLES -->
+                <div class="controles-musica">
+                  <button class="control-btn" id="btnShuffle" title="Aleatorio">
+                    <i class="fa fa-shuffle"></i>
+                  </button>
+                  <button class="control-btn" id="btnAnterior" title="Anterior">
+                    <i class="fa fa-backward-step"></i>
+                  </button>
+                  <button
+                    class="control-btn control-btn-play"
+                    id="btnPlay"
+                    title="Play/Pause"
+                  >
+                    <i class="fa fa-play" id="iconoPlay"></i>
+                  </button>
+                  <button
+                    class="control-btn"
+                    id="btnSiguiente"
+                    title="Siguiente"
+                  >
+                    <i class="fa fa-forward-step"></i>
+                  </button>
+                  <button class="control-btn" id="btnRepeat" title="Repetir">
+                    <i class="fa fa-repeat"></i>
+                  </button>
                 </div>
 
-                <div class="row" style="margin-top: 40px;">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="grupo-padres">
-                            <h3 class="subtitulo-familia">Padrinos</h3>
-                            <p class="nombre-padre">Olivia Vides de Navas</p>
-                            <p class="nombre-padre">Luis Navas</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- NOMBRE DE LA CANCIÓN -->
+                <p class="nombre-cancion">Qué Suerte Tenerte</p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- EVENTOS -->
-        <div id="fh5co-event" class="seccion fh5co-bg">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Eventos</h2>
-                    </div>
-                </div>
+      <!-- AUDIO OCULTO -->
+      <audio id="musica-fondo" loop>
+        <source src="music/que-suerte-tenerte.mp3" type="audio/mpeg" />
+      </audio>
 
-                <!-- 1. CEREMONIA RELIGIOSA -->
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="tarjeta-evento">
-                            <div class="contenido-evento">
-                                <h3 class="titulo-evento">CEREMONIA RELIGIOSA</h3>
-
-                                <div class="info-evento">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>24 Enero 2026</span>
-                                </div>
-
-                                <div class="info-evento">
-                                    <i class="fa fa-clock"></i>
-                                    <span>16:00 horas</span>
-                                </div>
-
-                                <p><b>Basílica de Nuestra Señora del Rosario</b><br>Zona 1, Ciudad Capital</p>
-
-                                <div class="mapa-evento">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!3d3860.3192148241415!2d-90.50692049999999!3d14.6378125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a214d5418f95%3A0x8753d0dd44557e9b!2sOficina%20Iglesia%20Santo%20Domingo!5e0!3m2!1ses!2sgt!4v1765998176791!5m2!1ses!2sgt" frameborder="0" allowfullscreen loading="lazy" title="Mapa Ceremonia"></iframe>
-                                </div>
-                            </div>
-
-                            <div class="botones-evento">
-                                <a href="https://www.google.com/maps/dir/?api=1&destination=14.6378125,-90.5069204" target="_blank" class="boton boton-contorno">
-                                    <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. MENSAJE INTERMEDIO -->
-                <div class="row" style="margin-top: 40px;">
-                    <div class="col-md-10 col-md-offset-1 text-center">
-                        <div class="mensaje-transicion">
-                            <i class="fa fa-champagne-glasses"></i>
-                            <p>Posteriormente los esperamos en el Museo de la Merced para celebrar con nosotros</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. CÓCTEL Y RECEPCIÓN -->
-                <div class="row" style="margin-top: 40px;">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="tarjeta-evento">
-                            <div class="contenido-evento">
-                                <h3 class="titulo-evento">CÓCTEL Y RECEPCIÓN</h3>
-
-                                <div class="info-evento">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>24 Enero 2026</span>
-                                </div>
-
-                                <div class="info-evento">
-                                    <i class="fa fa-clock"></i>
-                                    <span>17:00 hrs - Cóctel (2do piso)</span>
-                                </div>
-
-                                <div class="info-evento">
-                                    <i class="fa fa-clock"></i>
-                                    <span>18:30 hrs - Recepción (1er piso)</span>
-                                </div>
-
-                                <p><b>Museo Convento de la Merced</b><br>Zona 1, Ciudad Capital</p>
-
-                                <div class="mapa-evento">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!3d3860.2265040183256!2d-90.5077864!3d14.64308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3aed1a1b287%3A0x2952da1c0e268971!2sMuseo%20de%20La%20Merced!5e0!3m2!1ses!2sgt!4v1765998112226!5m2!1ses!2sgt" frameborder="0" allowfullscreen loading="lazy" title="Mapa Recepción"></iframe>
-                                </div>
-                            </div>
-
-                            <div class="botones-evento">
-                                <a href="https://www.google.com/maps/dir/?api=1&destination=14.64308,-90.5077864" target="_blank" class="boton boton-contorno">
-                                    <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. INFORMACIÓN DE PARQUEO -->
-                <div class="row" style="margin-top: 30px;">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="info-parqueo">
-                            <i class="fa fa-parking"></i>
-                            <p><strong>Parqueo:</strong> Ubicado atrás de las instalaciones de la Policía Nacional Civil.</p>
-                            <p class="nota-efectivo"><i class="fa fa-money-bill-wave"></i> Por favor, llevar efectivo para el pago del parqueo.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- MENSAJE DE BIENVENIDA -->
+      <div id="fh5co-couple" class="seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <p class="mensaje-bienvenida">
+                Deseamos de todo corazón poder contar con la presencia de cada
+                uno de ustedes para juntos celebrar este día tan especial...
+              </p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- CONFIRMACIÓN DE ASISTENCIA -->
-        <div id="fh5co-rsvp" class="seccion">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="tarjeta-confirmacion">
-                            <!-- IMAGEN DE WHATSAPP -->
-                            <div class="icono-confirmacion">
-                                <img src="images/whatsapp.png" alt="WhatsApp" class="icono-whatsapp">
-                            </div>
-
-                            <!-- TÍTULO -->
-                            <h2 class="titulo-confirmacion">CONFIRMAR ASISTENCIA</h2>
-                            
-                            <!-- TEXTO -->
-                            <p class="texto-confirmacion">Agradecemos que confirmes tu asistencia antes del 5 de Enero</p>
-
-                            <!-- BOTONES WHATSAPP -->
-                            <div class="botones-confirmacion">
-                                <a href="https://wa.me/50232857369?text=Hola%20Masella%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026." target="_blank" class="boton-whatsapp">
-                                    Invitado de Masella
-                                </a>
-                                <a href="https://wa.me/50240834800?text=Hola%20Guzmán%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026." target="_blank" class="boton-whatsapp">
-                                    Invitado de Guzmán
-                                </a>
-                            </div>
-
-                            <!-- SECCIÓN SIN NIÑOS -->
-                            <div class="seccion-sin-ninos">
-                                <h3 class="titulo-sin-ninos">SIN NIÑOS</h3>
-                                <p class="texto-sin-ninos">Sabemos que para ustedes sus hijos son su alegría, pero esta ocasión nos gustaría que disfrutaran de una velada para adultos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- BENDICIÓN DE PADRES Y PADRINOS -->
+      <div id="fh5co-couple" class="seccion seccion-gris">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">
+                Con la bendición de Dios y el amor de nuestros padres
+              </h2>
+              <!-- IMAGEN ARGOLLAS DESPUÉS DEL TÍTULO -->
+              <img
+                src="images/argollas.png"
+                alt="Argollas"
+                style="
+                  max-width: 120px;
+                  margin: 20px auto;
+                  display: block;
+                  opacity: 0.8;
+                "
+              />
             </div>
-        </div>
+          </div>
 
-        <!-- ITINERARIO - NUEVO DISEÑO VERTICAL -->
-        <div id="fh5co-itinerary" class="seccion seccion-gris">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Itinerario de Actividades</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="timeline-vertical">
-                            <!-- CEREMONIA -->
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-icono">
-                                    <i class="fa fa-rings-wedding"></i>
-                                </div>
-                                <div class="timeline-linea"></div>
-                                <div class="timeline-info">
-                                    <h3 class="timeline-titulo">CEREMONIA</h3>
-                                    <p class="timeline-hora">18:50</p>
-                                </div>
-                            </div>
-
-                            <!-- RECEPCIÓN -->
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-icono">
-                                    <i class="fa fa-champagne-glasses"></i>
-                                </div>
-                                <div class="timeline-linea"></div>
-                                <div class="timeline-info">
-                                    <h3 class="timeline-titulo">RECEPCIÓN</h3>
-                                    <p class="timeline-hora">20:00</p>
-                                </div>
-                            </div>
-
-                            <!-- CENA -->
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-icono">
-                                    <i class="fa fa-utensils"></i>
-                                </div>
-                                <div class="timeline-linea"></div>
-                                <div class="timeline-info">
-                                    <h3 class="timeline-titulo">CENA</h3>
-                                    <p class="timeline-hora">21:00</p>
-                                </div>
-                            </div>
-
-                            <!-- FIESTA -->
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-icono">
-                                    <i class="fa fa-sparkles"></i>
-                                </div>
-                                <div class="timeline-info">
-                                    <h3 class="timeline-titulo">FIESTA</h3>
-                                    <p class="timeline-hora">23:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <div class="grupo-padres">
+                <h3 class="subtitulo-familia">Padres del Novio</h3>
+                <p class="nombre-padre">Fredy Antonio Guzmán de León</p>
+                <p class="nombre-padre">Geisy Elizabeth Amézquita Fuentes</p>
+              </div>
             </div>
-        </div>
-
-        <!-- CÓDIGO DE VESTIMENTA -->
-        <div id="fh5co-dresscode" class="seccion">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Código de Vestimenta</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="tarjeta-vestimenta-unificada">
-                            <h3 class="titulo-vestimenta">Etiqueta Formal</h3>
-                            
-                            <!-- IMÁGENES DE VESTIDO Y TRAJE -->
-                            <div class="imagenes-vestimenta">
-                                <img src="images/mujerr.png" alt="Vestido" class="imagen-vestido">
-                                <img src="images/hombree.png" alt="Traje" class="imagen-traje">
-                            </div>
-
-                            <!-- ESPECIFICACIONES -->
-                            <div class="especificaciones-vestimenta">
-                                <div class="especificacion-mujer">
-                                    <h4>MUJERES</h4>
-                                    <p class="detalle-principal">Vestido Largo</p>
-                                    <p class="detalle-nota">(No blanco, rojo y azul marino)</p>
-                                    <p class="detalle-info">Tacos abiertos o cerrados</p>
-                                </div>
-
-                                <div class="divisor-vestimenta"></div>
-
-                                <div class="especificacion-hombre">
-                                    <h4>HOMBRES</h4>
-                                    <p class="detalle-principal">Traje Formal</p>
-                                    <p class="detalle-nota">(No azul claro)</p>
-                                    <p class="detalle-info">Zapato formal</p>
-                                    <p class="detalle-info">Corbata</p>
-                                </div>
-                            </div>
-
-                            <p class="nota-especial">El azul marino está reservado para nuestras damas de honor.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 text-center">
+              <div class="grupo-padres">
+                <h3 class="subtitulo-familia">Padres de la Novia</h3>
+                <p class="nombre-padre">Tulio Humberto Masella Archila</p>
+                <p class="nombre-padre">
+                  Irlanda Amarilis Mollinedo Román de Masella
+                </p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- MESA DE REGALOS -->
-        <div id="fh5co-gifts" class="seccion seccion-gris">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Mesa de Regalos</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="contenedor-regalos">
-                            <p>El mejor regalo es tu presencia, pero si deseas darnos un detalle puedes hacerlo mediante una <strong><i class="fa fa-wallet"></i> lluvia de sobres</strong> el día del evento o hemos creado una lista de regalos con artículos que nos ayudarán a construir nuestro hogar juntos.</p>
-                            
-                            <div class="opciones-regalo">
-                                <div class="opcion-regalo-item">
-                                    <img src="images/cemaco-logo-removebg-preview.png" alt="Cemaco Logo" class="logo-regalo">
-                                    <h3>Lista Cemaco</h3>
-                                    <p>Artículos para nuestro hogar</p>
-                                    <a href="https://www.cemaco.com/list/BODAGUZMANMASELLA24012026" target="_blank" class="boton boton-principal">Ver Lista</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="row" style="margin-top: 40px">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <div class="grupo-padres">
+                <h3 class="subtitulo-familia">Padrinos</h3>
+                <p class="nombre-padre">Luis Eduardo Navas</p>
+                <p class="nombre-padre">Olivia Vides de Navas</p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- GALERÍA -->
-        <div id="fh5co-gallery" class="seccion">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="titulo-seccion">Galería</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul id="fh5co-gallery-list">
-                            <li style="background-image: url('images/fundicion-1.jpg');">
-                                <div class="case-studies-summary"></div>
-                            </li>
-                            <li style="background-image: url('images/fundicion-2.jpg');">
-                                <div class="case-studies-summary"></div>
-                            </li>
-                            <li style="background-image: url('images/fundicion-3.jpg');">
-                                <div class="case-studies-summary"></div>
-                            </li>
-                            <li style="background-image: url('images/fundicion-4.jpg');">
-                                <div class="case-studies-summary"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- EVENTOS -->
+      <div id="fh5co-event" class="seccion fh5co-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">Eventos</h2>
             </div>
-        </div>
+          </div>
 
-        <!-- DESPEDIDA -->
-        <div id="fh5co-footer" class="seccion text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <i class="fa fa-heart icono-corazon"></i>
-                        <h2 class="mensaje-final">¡Te esperamos con mucho amor!</h2>
-                        <p class="firma">Guzmán & Masella</p>
-                        <p class="fecha-final">24 • 01 • 2026</p>
-                    </div>
+          <!-- 1. CEREMONIA RELIGIOSA -->
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="tarjeta-evento">
+                <div class="contenido-evento">
+                  <h3 class="titulo-evento">CEREMONIA RELIGIOSA</h3>
+
+                  <div class="info-evento">
+                    <i class="fa fa-calendar"></i>
+                    <span>24 Enero 2026</span>
+                  </div>
+
+                  <div class="info-evento">
+                    <i class="fa fa-clock"></i>
+                    <span>16:00 horas</span>
+                  </div>
+
+                  <p>
+                    <b>Basílica de Nuestra Señora del Rosario</b><br />Zona 1,
+                    Ciudad Capital
+                  </p>
+
+                  <div class="mapa-evento">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!3d3860.3192148241415!2d-90.50692049999999!3d14.6378125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a214d5418f95%3A0x8753d0dd44557e9b!2sOficina%20Iglesia%20Santo%20Domingo!5e0!3m2!1ses!2sgt!4v1765998176791!5m2!1ses!2sgt"
+                      frameborder="0"
+                      allowfullscreen
+                      loading="lazy"
+                      title="Mapa Ceremonia"
+                    ></iframe>
+                  </div>
                 </div>
-            </div>
-        </div>
 
+                <div class="botones-evento">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=14.6378125,-90.5069204"
+                    target="_blank"
+                    class="boton boton-contorno"
+                  >
+                    <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. MENSAJE INTERMEDIO -->
+          <div class="row" style="margin-top: 40px">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <div class="mensaje-transicion">
+                <i class="fa fa-champagne-glasses"></i>
+                <p>
+                  Posteriormente los esperamos en el Museo de la Merced para
+                  celebrar con nosotros
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. CÓCTEL Y RECEPCIÓN -->
+          <div class="row" style="margin-top: 40px">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="tarjeta-evento">
+                <div class="contenido-evento">
+                  <h3 class="titulo-evento">CÓCTEL Y RECEPCIÓN</h3>
+
+                  <div class="info-evento">
+                    <i class="fa fa-calendar"></i>
+                    <span>24 Enero 2026</span>
+                  </div>
+
+                  <div class="info-evento">
+                    <i class="fa fa-clock"></i>
+                    <span>17:00 hrs - Cóctel (2do piso)</span>
+                  </div>
+
+                  <div class="info-evento">
+                    <i class="fa fa-clock"></i>
+                    <span>18:30 hrs - Recepción (1er piso)</span>
+                  </div>
+
+                  <p>
+                    <b>Museo Convento de la Merced</b><br />Zona 1, Ciudad
+                    Capital
+                  </p>
+
+                  <div class="mapa-evento">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!3d3860.2265040183256!2d-90.5077864!3d14.64308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3aed1a1b287%3A0x2952da1c0e268971!2sMuseo%20de%20La%20Merced!5e0!3m2!1ses!2sgt!4v1765998112226!5m2!1ses!2sgt"
+                      frameborder="0"
+                      allowfullscreen
+                      loading="lazy"
+                      title="Mapa Recepción"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="botones-evento">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=14.64308,-90.5077864"
+                    target="_blank"
+                    class="boton boton-contorno"
+                  >
+                    <i class="fa fa-map-marker-alt"></i> ¿Cómo llegar?
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. INFORMACIÓN DE PARQUEO -->
+          <div class="row" style="margin-top: 30px">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="info-parqueo">
+                <i class="fa fa-parking"></i>
+                <p>
+                  <strong>Parqueo:</strong> Ubicado atrás de las instalaciones
+                  de la Policía Nacional Civil.
+                </p>
+                <p class="nota-efectivo">
+                  <i class="fa fa-money-bill-wave"></i> Por favor, llevar
+                  efectivo para el pago del parqueo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONFIRMACIÓN DE ASISTENCIA -->
+      <div id="fh5co-rsvp" class="seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="tarjeta-confirmacion">
+                <!-- IMAGEN DE WHATSAPP -->
+                <div class="icono-confirmacion">
+                  <img
+                    src="images/whatsapp.png"
+                    alt="WhatsApp"
+                    class="icono-whatsapp"
+                  />
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-confirmacion">CONFIRMAR ASISTENCIA</h2>
+
+                <!-- TEXTO -->
+                <p class="texto-confirmacion">
+                  Agradecemos que confirmes tu asistencia antes del 5 de Enero
+                </p>
+
+                <!-- BOTONES WHATSAPP -->
+                <div class="botones-confirmacion">
+                  <a
+                    href="https://wa.me/50247700182?text=Hola%20Masella%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026."
+                    target="_blank"
+                    class="boton-whatsapp"
+                  >
+                    Invitado de Masella
+                  </a>
+                  <a
+                    href="https://wa.me/50242154639?text=Hola%20Guzmán%2C%20confirmo%20mi%20asistencia%20a%20tu%20boda%20el%2024%20de%20enero%20de%202026."
+                    target="_blank"
+                    class="boton-whatsapp"
+                  >
+                    Invitado de Guzmán
+                  </a>
+                </div>
+
+                <!-- SECCIÓN SIN NIÑOS -->
+                <div class="seccion-sin-ninos">
+                  <h3 class="titulo-sin-ninos">SIN NIÑOS</h3>
+                  <p class="texto-sin-ninos">
+                    Para que puedan disfrutar plenamente de nuestra boda, hemos
+                    decidido que sea un evento exclusivo para adultos.
+                    Agradecemos de corazón su comprensión
+                  </p>
+                  <br />
+                  <p class="texto-sin-ninos">
+                    Los niños son una bendición, pero esta noche está dedicada a
+                    ustedes para que puedan relajarse y celebrar sin
+                    preocupaciones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITINERARIO - NUEVO DISEÑO VERTICAL -->
+      <div id="fh5co-itinerary" class="seccion seccion-gris">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">Itinerario de Actividades</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="timeline-vertical">
+                <!-- CEREMONIA -->
+                <div class="timeline-item-vertical">
+                  <div class="timeline-icono">
+                    <i class="fa fa-church"></i>
+                  </div>
+                  <div class="timeline-linea"></div>
+                  <div class="timeline-info">
+                    <h3 class="timeline-titulo">CEREMONIA</h3>
+                    <p class="timeline-hora">16:00</p>
+                  </div>
+                </div>
+
+                <!-- CÓCTEL -->
+                <div class="timeline-item-vertical">
+                  <div class="timeline-icono">
+                    <i class="fa fa-glass-cheers"></i>
+                  </div>
+                  <div class="timeline-linea"></div>
+                  <div class="timeline-info">
+                    <h3 class="timeline-titulo">CÓCTEL</h3>
+                    <p class="timeline-hora">17:00</p>
+                  </div>
+                </div>
+
+                <!-- RECEPCIÓN -->
+                <div class="timeline-item-vertical">
+                  <div class="timeline-icono">
+                    <i class="fa fa-champagne-glasses"></i>
+                  </div>
+                  <div class="timeline-linea"></div>
+                  <div class="timeline-info">
+                    <h3 class="timeline-titulo">RECEPCIÓN</h3>
+                    <p class="timeline-hora">18:00</p>
+                  </div>
+                </div>
+
+                <!-- CENA -->
+                <div class="timeline-item-vertical">
+                  <div class="timeline-icono">
+                    <i class="fa fa-utensils"></i>
+                  </div>
+                  <div class="timeline-linea"></div>
+                  <div class="timeline-info">
+                    <h3 class="timeline-titulo">CENA</h3>
+                    <p class="timeline-hora">20:00</p>
+                  </div>
+                </div>
+
+                <!-- FIESTA -->
+                <div class="timeline-item-vertical">
+                  <div class="timeline-icono">
+                    <i class="fa fa-music"></i>
+                  </div>
+                  <div class="timeline-info">
+                    <h3 class="timeline-titulo">FIESTA</h3>
+                    <p class="timeline-hora">23:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CÓDIGO DE VESTIMENTA -->
+      <div id="fh5co-dresscode" class="seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">Código de Vestimenta</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="tarjeta-vestimenta-unificada">
+                <h3 class="titulo-vestimenta">Etiqueta Formal</h3>
+
+                <!-- IMÁGENES DE VESTIDO Y TRAJE -->
+                <div class="imagenes-vestimenta">
+                  <img
+                    src="images/mujerr.png"
+                    alt="Vestido"
+                    class="imagen-vestido"
+                  />
+                  <img
+                    src="images/hombree.png"
+                    alt="Traje"
+                    class="imagen-traje"
+                  />
+                </div>
+
+                <!-- ESPECIFICACIONES -->
+                <div class="especificaciones-vestimenta">
+                  <div class="especificacion-mujer">
+                    <h4>MUJERES</h4>
+                    <p class="detalle-principal">Vestido Largo</p>
+                    <p class="detalle-nota">(No blanco, rojo y azul marino)</p>
+                    <p class="detalle-info">Tacos abiertos o cerrados</p>
+                  </div>
+
+                  <div class="divisor-vestimenta"></div>
+
+                  <div class="especificacion-hombre">
+                    <h4>HOMBRES</h4>
+                    <p class="detalle-principal">Traje Formal</p>
+                    <p class="detalle-nota">(No azul claro)</p>
+                    <p class="detalle-info">Zapato formal</p>
+                    <p class="detalle-info">Corbata</p>
+                  </div>
+                </div>
+
+                <p class="nota-especial">
+                  El azul marino está reservado para nuestras damas de honor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MESA DE REGALOS -->
+      <div id="fh5co-gifts" class="seccion seccion-gris">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">Mesa de Regalos</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="contenedor-regalos">
+                <p>
+                  El mejor regalo es tu presencia, pero si deseas darnos un
+                  detalle puedes hacerlo mediante una
+                  <strong><i class="fa fa-wallet"></i> lluvia de sobres</strong>
+                  el día del evento o hemos creado una lista de regalos con
+                  artículos que nos ayudarán a construir nuestro hogar juntos.
+                </p>
+
+                <div class="opciones-regalo">
+                  <div class="opcion-regalo-item">
+                    <img
+                      src="images/cemaco-logo-removebg-preview.png"
+                      alt="Cemaco Logo"
+                      class="logo-regalo"
+                    />
+                    <h3>Lista Cemaco</h3>
+                    <p>Artículos para nuestro hogar</p>
+                    <a
+                      href="https://www.cemaco.com/list/BODAGUZMANMASELLA24012026"
+                      target="_blank"
+                      class="boton boton-principal"
+                      >Ver Lista</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERÍA -->
+      <div id="fh5co-gallery" class="seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <h2 class="titulo-seccion">Galería</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <ul id="fh5co-gallery-list">
+                <li style="background-image: url('images/fundicion-1.jpg')">
+                  <div class="case-studies-summary"></div>
+                </li>
+                <li style="background-image: url('images/fundicion-2.jpg')">
+                  <div class="case-studies-summary"></div>
+                </li>
+                <li style="background-image: url('images/fundicion-3.jpg')">
+                  <div class="case-studies-summary"></div>
+                </li>
+                <li style="background-image: url('images/fundicion-4.jpg')">
+                  <div class="case-studies-summary"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESPEDIDA -->
+      <div id="fh5co-footer" class="seccion text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <i class="fa fa-heart icono-corazon"></i>
+              <h2 class="mensaje-final">¡Te esperamos con mucho amor!</h2>
+              <p class="firma">Guzmán & Masella</p>
+              <p class="fecha-final">24 • 01 • 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='https://momentjs.com/downloads/moment.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
     <script src="js/script.js"></script>
-
-</body>
+  </body>
 </html>
