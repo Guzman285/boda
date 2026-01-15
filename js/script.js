@@ -98,6 +98,20 @@ document.getElementById('btnRepeat').addEventListener('click', function() {
     this.style.color = audio.loop ? '#2C5F8D' : '#999';
 });
 
+// === LOADING SPINNER ===
+window.addEventListener('load', function() {
+    // Ocultar el loader cuando todo esté cargado
+    var loader = document.querySelector('.fh5co-loader');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('oculto');
+            setTimeout(function() {
+                loader.style.display = 'none';
+            }, 500);
+        }, 500);
+    }
+});
+
 // === INICIALIZAR AL CARGAR ===
 $(document).ready(function() {
     iniciarContador();
